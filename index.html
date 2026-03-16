@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ============================================================
+     HEAD
+     ============================================================ -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mohammed Kaif Ahmed — Business Analyst with a PG Diploma in Strategy Management (DCU Business School) and 4+ years across FMCG, retail, and e-commerce. Supply chain intelligence, procurement analytics, and data engineering.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mohammed Kaif Ahmed — Portfolio">
+  <meta property="og:description" content="Business Analyst with a PG Diploma in Strategy Management (DCU) and 4+ years of experience in supply chain planning, scenario modelling, and operational analytics.">
+  <meta property="og:type" content="website">
+
+  <title>Mohammed Kaif Ahmed — Portfolio</title>
+
+  <!-- Google Fonts: Playfair Display + Lato -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+/* ── Design Tokens ─────────────────────────────────────────── */
+    :root {
+      --bg:       #000000;
+      --surface:  #1a1a1a;
+      --text:     #f5f1e8;
+      --secondary:rgba(245, 241, 232, 0.5);
+      --border:   rgba(245, 241, 232, 0.1);
+      --tag-bg:   rgba(245, 241, 232, 0.08);
+      --serif:    'Playfair Display', 'Times New Roman', Georgia, serif;
+      --sans:     'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --mono:     'SF Mono', 'JetBrains Mono', 'Fira Code', monospace;
+    }
+
+    /* ── Reset ─────────────────────────────────────────────────── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ── Scrollbar ──────────────────────────────────────────────── */
+    ::-webkit-scrollbar           { width: 8px; }
+    ::-webkit-scrollbar-track     { background: #000; }
+    ::-webkit-scrollbar-thumb     { background: #333; }
+    ::-webkit-scrollbar-thumb:hover { background: #444; }
+
+    /* ── Selection ──────────────────────────────────────────────── */
+    ::selection {
+      background: var(--text);
+      color: #000;
+    }
+
+    /* ── Base ───────────────────────────────────────────────────── */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--serif);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+    }
+
+    code, pre, .tech-stack {
+      font-family: var(--mono);
+    }
+
+    /* ── Layout ─────────────────────────────────────────────────── */
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    @media (min-width: 1024px) {
+      section {
+        padding: 120px 0;
+      }
+    }
+
+    section:not(#hero) {
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── Navigation ─────────────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: linear-gradient(rgba(0, 0, 0, 0.9), transparent);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-brand {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      line-height: 1;
+    }
+
+    .nav-brand-name {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--text);
+      letter-spacing: 0.02em;
+    }
+
+    .nav-brand-sub {
+      font-family: var(--sans);
+      font-size: 8px;
+      font-weight: 400;
+      color: var(--secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.4em;
+      margin-top: 4px;
+    }
+
+    /* Mobile: hide nav links, show hamburger */
+    .nav-links {
+      display: none;
+      list-style: none;
+    }
+
+    .hamburger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      color: var(--text);
+      padding: 4px 8px;
+      opacity: 0.7;
+    }
+
+    .hamburger:hover {
+      opacity: 1;
+    }
+
+    /* Mobile dropdown */
+    .nav.nav-open .nav-links {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 64px;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.97);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 0;
+    }
+
+    .nav.nav-open .nav-links li {
+      width: 100%;
+    }
+
+    .nav.nav-open .nav-links a {
+      display: block;
+      padding: 12px 24px;
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--text);
+      text-decoration: none;
+      opacity: 0.6;
+    }
+
+    .nav.nav-open .nav-links a:hover {
+      opacity: 1;
+    }
+
+    /* Desktop: show nav links */
+    @media (min-width: 768px) {
+      .nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        align-items: center;
+      }
+
+      .nav-links a {
+        font-family: var(--sans);
+        font-size: 10px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+        color: var(--text);
+        text-decoration: none;
+        opacity: 0.6;
+        transition: opacity 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        opacity: 1;
+      }
+
+      .hamburger {
+        display: none;
+      }
+    }
+
+    /* ── Hero ───────────────────────────────────────────────────── */
+    #hero {
+      padding-top: 160px;
+      padding-bottom: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #hero-canvas {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    #hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (min-width: 1024px) {
+      #hero {
+        padding-top: 200px;
+        padding-bottom: 120px;
+      }
+    }
+
+    #hero h1 {
+      font-family: var(--serif);
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+      color: var(--text);
+    }
+
+    @media (min-width: 768px) {
+      #hero h1 {
+        font-size: 52px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      #hero h1 {
+        font-size: 64px;
+      }
+    }
+
+    .hero-sub {
+      color: var(--secondary);
+      font-family: var(--sans);
+      font-size: 16px;
+      margin-top: 24px;
+      max-width: 700px;
+      line-height: 1.7;
+    }
+
+    .hero-contact {
+      margin-top: 28px;
+      font-family: var(--sans);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--secondary);
+    }
+
+    .hero-contact a {
+      color: var(--text);
+      text-decoration: none;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
+
+    .hero-contact a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    /* ── Section Headings ───────────────────────────────────────── */
+    h2 {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      margin-bottom: 32px;
+      color: var(--text);
+    }
+
+    section p {
+      margin-bottom: 16px;
+    }
+
+    /* ── About ──────────────────────────────────────────────────── */
+    .about-layout {
+      display: flex;
+      gap: 52px;
+      align-items: flex-start;
+    }
+
+    .about-photo {
+      flex: 0 0 40%;
+      max-width: 320px;
+    }
+
+    .about-photo img {
+      width: 100%;
+      display: block;
+      border-radius: 0;
+      border: 1px solid var(--border);
+      filter: grayscale(20%);
+      transition: filter 0.6s ease;
+    }
+
+    .about-photo img:hover {
+      filter: grayscale(0%);
+    }
+
+    .about-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    @media (max-width: 767px) {
+      .about-layout {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .about-photo {
+        flex: none;
+        width: 100%;
+        max-width: 280px;
+      }
+    }
+
+    #about p {
+      color: var(--secondary);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* ── Tags ───────────────────────────────────────────────────── */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .tag {
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      border-radius: 0;
+      padding: 6px 12px;
+      font-family: var(--sans);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text);
+      display: inline-block;
+    }
+
+    /* ── Experience ─────────────────────────────────────────────── */
+    #experience article {
+      margin-bottom: 52px;
+    }
+
+    .role-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .role-header-left {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .role-header h3 {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--text);
+    }
+
+    .role-header .company {
+      display: block;
+      color: var(--secondary);
+      font-family: var(--sans);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-top: 5px;
+    }
+
+    .role-header .date {
+      color: var(--secondary);
+      font-family: var(--sans);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      white-space: nowrap;
+      padding-top: 4px;
+    }
+
+    .role-body {
+      margin-top: 12px;
+    }
+
+    .role-body p {
+      margin-bottom: 12px;
+      font-size: 15px;
+      color: var(--secondary);
+      line-height: 1.7;
+    }
+
+    .impact {
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-top: 14px;
+      font-weight: 400;
+      border-left: 2px solid var(--text);
+      padding-left: 12px;
+    }
+
+    /* ── Projects ───────────────────────────────────────────────── */
+    .section-subtitle {
+      color: var(--secondary);
+      font-family: var(--sans);
+      font-size: 14px;
+      margin-bottom: 40px;
+      margin-top: -16px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2px;
+    }
+
+    @media (min-width: 768px) {
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2px;
+      }
+    }
+
+    .project-card {
+      background: var(--surface);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      padding: 28px;
+      border-radius: 0;
+      border-left-width: 3px;
+      border-left-style: solid;
+    }
+
+    .project-card h3 {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .card-context {
+      color: var(--secondary);
+      font-family: var(--sans);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 14px;
+    }
+
+    .project-card > p:not(.card-context):not(.tech-stack) {
+      color: var(--secondary);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    .tech-stack {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--secondary);
+      margin-top: 14px;
+      opacity: 0.7;
+      margin-bottom: 0;
+    }
+
+    .card-links {
+      margin-top: 18px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card-links a {
+      font-family: var(--sans);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--text);
+      text-decoration: none;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
+
+    .card-links a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    /* ── Education ──────────────────────────────────────────────── */
+    #education article {
+      margin-bottom: 36px;
+    }
+
+    #education article h3 {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--text);
+    }
+
+    #education article .edu-meta {
+      color: var(--secondary);
+      font-family: var(--sans);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-top: 6px;
+      margin-bottom: 0;
+    }
+
+    #education article .edu-focus {
+      color: var(--secondary);
+      font-size: 14px;
+      margin-top: 8px;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    .cert-heading {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--text);
+      margin-top: 48px;
+      margin-bottom: 16px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Footer / Contact ───────────────────────────────────────── */
+    footer {
+      padding: 80px 0 40px;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (min-width: 1024px) {
+      footer {
+        padding: 120px 0 60px;
+      }
+    }
+
+    footer p {
+      color: var(--secondary);
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    address {
+      font-style: normal;
+      margin: 28px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    address a {
+      font-family: var(--sans);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--text);
+      text-decoration: none;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
+
+    address a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    dl {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10px 20px;
+    }
+
+    dt {
+      font-family: var(--sans);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--text);
+      opacity: 0.5;
+      white-space: nowrap;
+    }
+
+    dd {
+      font-size: 14px;
+      color: var(--secondary);
+    }
+
+    .footer-line {
+      text-align: center;
+      font-family: var(--sans);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: var(--secondary);
+      margin-top: 72px;
+      padding-bottom: 24px;
+      opacity: 0.45;
+    }
+
+    /* ── Scroll Progress Bar ────────────────────────────────────── */
+    #scroll-progress {
+      position: fixed;
+      top: 0; left: 0;
+      height: 1px;
+      width: 0%;
+      background: var(--text);
+      opacity: 0.55;
+      z-index: 2000;
+      pointer-events: none;
+    }
+
+    /* ── Hero Word Animation ─────────────────────────────────────── */
+    .hero-word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(15px);
+      transition: opacity 0.5s cubic-bezier(0.0, 0.0, 0.2, 1),
+                  transform 0.5s cubic-bezier(0.0, 0.0, 0.2, 1);
+    }
+    .hero-word.w-in { opacity: 1; transform: translateY(0); }
+
+    /* ── Nav Underline Draw ──────────────────────────────────────── */
+    @media (min-width: 768px) {
+      .nav-links a { position: relative; padding-bottom: 3px; }
+      .nav-links a::after {
+        content: '';
+        position: absolute;
+        bottom: 0; left: 0;
+        width: 0; height: 1px;
+        background: var(--text);
+        transition: width 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+      }
+      .nav-links a:hover::after { width: 100%; }
+    }
+
+    /* ── Project Card Hover ──────────────────────────────────────── */
+    .project-card {
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+                  background-color 0.3s ease,
+                  box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      background-color: #1e1e1e;
+      box-shadow: -6px 0 20px rgba(245, 241, 232, 0.04);
+    }
+    .project-card h3 { transition: color 0.3s ease; }
+    .project-card:hover h3 { color: #ffffff; }
+
+    .card-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+      transition: opacity 0.3s ease,
+                  transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+    .card-links a .arrow {
+      display: inline-block;
+      opacity: 0;
+      transform: translateX(-4px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      margin-left: 4px;
+    }
+    .project-card:hover .card-links a { transform: translateX(4px); }
+    .project-card:hover .card-links a .arrow {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* ── Tag Hover ───────────────────────────────────────────────── */
+    .tag {
+      transition: background 0.3s ease,
+                  transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+      cursor: default;
+    }
+    .tag:hover {
+      background: rgba(245, 241, 232, 0.15);
+      transform: scale(1.03);
+    }
+
+    /* ── Address Link Hover ──────────────────────────────────────── */
+    address a { position: relative; padding-bottom: 2px; }
+    address a:hover { text-decoration: none; }
+    address a::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 1px;
+      background: var(--text);
+      transition: width 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+    address a:hover::after { width: 100%; }
+
+    /* ── Scroll Animation Classes ────────────────────────────────── */
+    .anim-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.0, 0.0, 0.2, 1),
+                  transform 0.8s cubic-bezier(0.0, 0.0, 0.2, 1);
+    }
+    .anim-left {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: opacity 1s cubic-bezier(0.0, 0.0, 0.2, 1),
+                  transform 1s cubic-bezier(0.0, 0.0, 0.2, 1);
+    }
+    .anim-right {
+      opacity: 0;
+      transform: translateX(40px);
+      transition: opacity 1s cubic-bezier(0.0, 0.0, 0.2, 1),
+                  transform 1s cubic-bezier(0.0, 0.0, 0.2, 1);
+    }
+    .anim-tag {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    .anim-in { opacity: 1 !important; transform: none !important; }
+
+    /* ── Typewriter Cursor ───────────────────────────────────────── */
+    .tw-cursor {
+      display: inline-block;
+      width: 1px;
+      height: 0.85em;
+      background: var(--text);
+      margin-left: 2px;
+      vertical-align: text-bottom;
+      animation: twblink 0.7s step-end infinite;
+    }
+    @keyframes twblink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0; }
+    }
+
+    /* ── Focus Styles ───────────────────────────────────────────── */
+    a:focus-visible,
+    button:focus-visible {
+      outline: 1px solid var(--text);
+      outline-offset: 2px;
+    }
+
+    /* ── prefers-reduced-motion ──────────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+      #hero-canvas { display: none !important; }
+      .hero-word, .anim-up, .anim-left, .anim-right, .anim-tag {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+
+<!-- ============================================================
+     BODY
+     ============================================================ -->
+<body>
+<div id="scroll-progress" aria-hidden="true"></div>
+
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<header>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-brand">
+        <span class="nav-brand-name">Mohammed Kaif Ahmed</span>
+        <span class="nav-brand-sub">Supply Chain Intelligence</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============================================================
+     MAIN
+     ============================================================ -->
+<main>
+
+<!-- ── HERO ─────────────────────────────────────────────────── -->
+<section id="hero">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="container">
+    <h1>Supply Chain Intelligence. Procurement Analytics. Data Engineering.</h1>
+    <p class="hero-sub">Business Analyst with a PG Diploma in Strategy Management (DCU Business School) and 4+ years of experience in supply chain planning, scenario modelling, and operational analytics across FMCG, retail, and e-commerce environments. I build tools that solve real operational problems, from demand forecasting models to procurement intelligence platforms.</p>
+    <p class="hero-contact">
+      Dublin, Ireland
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="mailto:kaifahmed6864@gmail.com">kaifahmed6864@gmail.com</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="tel:+353894120412">+353 894120412</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="https://linkedin.com/in/kaif-ahmed-bb972421a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="https://github.com/Kaif198" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </p>
+  </div>
+</section>
+
+<!-- ── ABOUT ─────────────────────────────────────────────────── -->
+<section id="about">
+  <div class="container">
+    <h2>About</h2>
+    <div class="about-layout">
+      <div class="about-photo">
+        <img src="KAIF_PORTRAIT.jpeg" alt="Mohammed Kaif Ahmed">
+      </div>
+      <div class="about-content">
+    <p>I build tools that solve real operational problems. Every project in my portfolio started with a specific business challenge: delivery networks with no real-time visibility, quality defects caught too late, procurement teams drowning in manual data validation, or executives making decisions without the numbers they need.</p>
+    <p>What ties them together is a simple belief: if you have the right strategic lens and understand the business problem deeply enough, AI and modern tech become incredibly powerful accelerators. I use tools like Claude Code, Cursor AI, and GitHub Copilot not as shortcuts, but as force multipliers for domain expertise built across procurement, supply chain, and operations.</p>
+    <div class="tags">
+      <span class="tag">Demand Forecasting (ARIMA, SARIMA, Prophet, Random Forest)</span>
+      <span class="tag">S&amp;OP / S&amp;OE Support</span>
+      <span class="tag">Scenario Modelling</span>
+      <span class="tag">Volume &amp; Allocation Planning</span>
+      <span class="tag">Inventory Optimisation</span>
+      <span class="tag">Capacity Planning</span>
+      <span class="tag">Advanced Excel (VBA Macros, Power Query, Pivots, SUMIFS, INDEX/MATCH, XLOOKUP, NPV/IRR)</span>
+      <span class="tag">SQL (PostgreSQL)</span>
+      <span class="tag">Python (Pandas, NumPy, Scikit-learn, PuLP)</span>
+      <span class="tag">Power BI</span>
+      <span class="tag">Tableau</span>
+      <span class="tag">SAP (MM/SD/ERP)</span>
+      <span class="tag">Oracle Cloud</span>
+      <span class="tag">n8n Automation</span>
+      <span class="tag">KPI Design &amp; Monitoring</span>
+      <span class="tag">Process Documentation &amp; Redesign</span>
+      <span class="tag">What-If &amp; Sensitivity Analysis</span>
+      <span class="tag">Cost-Benefit Analysis</span>
+      <span class="tag">Data Storytelling</span>
+      <span class="tag">Cross-Functional Stakeholder Management</span>
+    </div>
+      </div><!-- end .about-content -->
+    </div><!-- end .about-layout -->
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ────────────────────────────────────────────── -->
+<section id="experience">
+  <div class="container">
+    <h2>Experience</h2>
+
+    <article>
+      <div class="role-header">
+        <div class="role-header-left">
+          <h3>Team Lead — Operations, Supply Chain Planning &amp; Procurement</h3>
+          <span class="company">Oakberry | Dublin, Ireland</span>
+        </div>
+        <span class="date">Oct 2025 — Jan 2026</span>
+      </div>
+      <div class="role-body">
+        <p>Developed operational planning models across 8 locations, analysing volume patterns, supplier lead times, and fulfilment bottlenecks to support data-driven replenishment and capacity decisions. Built a 25+ KPI analytics framework with automated dashboards that cut reporting cycles by 60% and gave leadership real-time planning visibility.</p>
+        <p>Evaluated supply chain scenarios using TCO modelling and what-if analysis, consolidating 12 suppliers to 7 strategic partners and delivering EUR 45K annualised savings (15% cost reduction) while improving on-time delivery from 82% to 96%.</p>
+        <p>Built demand forecasting models (Python/Scikit-learn) improving inventory accuracy by 25% and eliminating EUR 18K annual waste. Created weighted supplier scorecards and spend dashboards surfacing EUR 12K+ in hidden inefficiencies, driving 18% supplier performance uplift.</p>
+        <p>Documented planning processes, defined best practices for procurement workflows, and onboarded new team members with structured SOPs, ensuring continuity and operational transparency across locations.</p>
+      </div>
+      <p class="impact">EUR 63K+ verified savings &nbsp;|&nbsp; 35% efficiency gain &nbsp;|&nbsp; 8-location planning &amp; scenario analytics</p>
+    </article>
+
+    <article>
+      <div class="role-header">
+        <div class="role-header-left">
+          <h3>Junior Supply Chain &amp; Planning Analyst</h3>
+          <span class="company">Shoppers Stop | Hyderabad, India</span>
+        </div>
+        <span class="date">Jan 2023 — Oct 2024</span>
+      </div>
+      <div class="role-body">
+        <p>Built multi-variable demand forecasting models (92% accuracy) across channels, categories, and SKUs, improving buy-plan efficiency by 15% and optimising INR 2.4M in planning decisions. Methodology transferable to volume assumption and allocation planning.</p>
+        <p>Rationalised supplier base from 45 to 32 vendors using Kraljic Matrix and Porter's Five Forces, negotiating terms that reduced acquisition costs by 12%. Built inventory dashboards reducing excess stock by 35% (INR 180K capital release).</p>
+        <p>Maintained planning master data accuracy across 12 locations and coordinated data handovers between buying, warehousing, and distribution teams to ensure synchronised replenishment.</p>
+      </div>
+      <p class="impact">INR 245K+ working capital improvement &nbsp;|&nbsp; 29% vendor rationalisation &nbsp;|&nbsp; 12-location planning analytics</p>
+    </article>
+
+    <article>
+      <div class="role-header">
+        <div class="role-header-left">
+          <h3>Customer Operations Associate — Cross-Border Logistics</h3>
+          <span class="company">Amazon | Remote (EU/USA/GCC)</span>
+        </div>
+        <span class="date">Sep 2021 — Nov 2022</span>
+      </div>
+      <div class="role-body">
+        <p>Analysed cross-border fulfilment workflows across EU, USA, and GCC markets, identifying process exceptions and data quality gaps that drove a 15% improvement in delivery performance. Built vendor compliance KPI framework enabling data-driven supplier evaluation at global scale.</p>
+        <p>Prepared structured process improvement recommendations for internal stakeholders, reducing exception handling time and supporting planning synchronisation across multi-market supply chain operations.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ── PROJECTS ───────────────────────────────────────────────── -->
+<section id="projects">
+  <div class="container">
+    <h2>Projects</h2>
+    <p class="section-subtitle">14 live projects. Each one deployed, clickable, and built to demonstrate how I think about problems.</p>
+    <div class="projects-grid">
+
+      <!-- 01 -->
+      <article class="project-card" style="border-left-color: #FF9900;">
+        <h3>Amazon EU Operations Portal</h3>
+        <p class="card-context">Last-mile delivery intelligence across 15 stations, 7 EU countries</p>
+        <p>Central operations dashboard with LSTM neural network volume forecasting (TensorFlow.js), capacity planning simulator, and station risk matrix. Replaces manual spreadsheet tracking with real-time AI-generated executive insights.</p>
+        <p class="tech-stack">React 19, Vite, Recharts, Framer Motion, TensorFlow.js</p>
+        <div class="card-links">
+          <a href="https://amazon-eu-operations-portal-git-main-kaif-ahmeds-projects.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          <a href="https://github.com/Kaif198/Amazon-EU-Operations-Portal" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </article>
+
+      <!-- 02 -->
+      <article class="project-card" style="border-left-color: #DB0032;">
+        <h3>Red Bull Quality Performance Intelligence</h3>
+        <p class="card-context">FMCG quality monitoring across 6 facilities and 8 suppliers</p>
+        <p>Early warning system using Holt-Winters forecasting, CUSUM process control, and anomaly detection. Every model outputs plain-English narratives explaining the risk, the evidence, and the recommended action.</p>
+        <p class="tech-stack">React, Plotly.js, JavaScript (client-side ML)</p>
+        <div class="card-links">
+          <a href="https://cozy-zabaione-17bc6d.netlify.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        </div>
+      </article>
+
+      <!-- 03 -->
+      <article class="project-card" style="border-left-color: #00508F;">
+        <h3>ALDI SUD Supply Chain Intelligence Pipeline</h3>
+        <p class="card-context">Automated supplier data validation and enrichment</p>
+        <p>n8n workflow orchestration pipeline with 10 connected nodes and a 6-rule validation engine. Catches invalid delivery dates, impossible weights, and mismatched SKUs before they corrupt downstream planning.</p>
+        <p class="tech-stack">n8n (Railway), Neon PostgreSQL, React + Vite, Recharts, Tailwind CSS</p>
+        <div class="card-links">
+          <a href="https://n8n-workflow-aldi.vercel.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        </div>
+      </article>
+
+      <!-- 04 -->
+      <article class="project-card" style="border-left-color: #00508F;">
+        <h3>ALDI SUD Financial Services Procurement Platform</h3>
+        <p class="card-context">EUR 47.3M vendor spend across 7 procurement categories</p>
+        <p>End-to-end procurement intelligence covering vendor onboarding through spend forecasting and risk monitoring. Uses ARIMA time-series forecasting and Random Forest vendor risk modelling (89.3% accuracy). Flags vendors with expired ISO certifications.</p>
+        <p class="tech-stack">React.js, Tailwind CSS, Recharts, Python ML models, Vercel</p>
+        <div class="card-links">
+          <a href="https://finserv-procure-intel.vercel.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        </div>
+      </article>
+
+      <!-- 05 -->
+      <article class="project-card" style="border-left-color: #555555;">
+        <h3>Apple Reseller Channel Intelligence Platform</h3>
+        <p class="card-context">EUR 17.6B channel revenue, 13 EMEA partners, 40+ SKUs</p>
+        <p>Ensemble forecasting model (SARIMA + Prophet + Random Forest) at 91.3% accuracy. Order chase engine identified EUR 26.1M in incremental revenue. Partner scorecards auto-generate root cause narratives for review calls.</p>
+        <p class="tech-stack">Python, Streamlit, Plotly, SARIMA, Prophet, Random Forest</p>
+        <div class="card-links">
+          <a href="https://web-production-47d7a.up.railway.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          <a href="https://github.com/Kaif198/apple-reseller-demand-intelligence" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </article>
+
+      <!-- 06 -->
+      <article class="project-card" style="border-left-color: #DB0032;">
+        <h3>Red Bull Supply Chain Cost Analyzer &amp; Optimizer</h3>
+        <p class="card-context">Austrian beverage distribution with Alpine terrain logistics</p>
+        <p>Full-stack logistics optimization with nearest-neighbor routing, Haversine distance calculations with Alpine road factor adjustments, and 4 optimization modes (Fastest, Cheapest, Greenest, Balanced). Includes fleet management and chain of custody module.</p>
+        <p class="tech-stack">React, TypeScript, TailwindCSS, Node.js, Express, PostgreSQL, Prisma</p>
+        <div class="card-links">
+          <a href="https://supply-chain-cost-analyzer-and-opti.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          <a href="https://github.com/Kaif198/Supply-Chain-Cost-Analyzer-and-Optimizer-" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </article>
+
+      <!-- 07 -->
+      <article class="project-card" style="border-left-color: #00508F;">
+        <h3>ALDI SUD Procurement Performance Dashboard</h3>
+        <p class="card-context">EUR 8.7B annual procurement, 1,847 active suppliers</p>
+        <p>Procurement maturity assessment benchmarking cost savings (3.3% vs 2.5% industry average), contract coverage, supplier quality, and delivery performance. Delivers a EUR 105M savings roadmap through strategic sourcing and supplier consolidation.</p>
+        <p class="tech-stack">HTML, Chart.js, SQL, Microsoft Excel</p>
+        <div class="card-links">
+          <a href="https://kaif198.github.io/Aldi-procurement-dashboard/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        </div>
+      </article>
+
+      <!-- 08 -->
+      <article class="project-card" style="border-left-color: #DB0032;">
+        <h3>Red Bull Performance Analytics Dashboard</h3>
+        <p class="card-context">EUR 14.93M sales data across 27,515 transactions</p>
+        <p>6-page interactive dashboard covering Executive Overview, Sales Analytics, Market Intelligence, Distribution Excellence, Consumer Insights, and Marketing ROI. Red Bull branded design language throughout.</p>
+        <p class="tech-stack">HTML5, CSS3, JavaScript, Chart.js</p>
+        <div class="card-links">
+          <a href="https://kaif198.github.io/Redbull-analytics-dashboard/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        </div>
+      </article>
+
+      <!-- 09 -->
+      <article class="project-card" style="border-left-color: #1CABE2;">
+        <h3>UNICEF Displacement Data Pipeline &amp; Visualization</h3>
+        <p class="card-context">Global child displacement data — ETL pipeline to interactive dashboard</p>
+        <p>Full data pipeline from raw UNICEF datasets through ETL cleaning to interactive visualization. Choropleth maps, scatter plots (GDP vs displacement), and time-series trends revealing humanitarian patterns.</p>
+        <p class="tech-stack">Quarto, Python, Plotly, HTML/CSS, GitHub Pages</p>
+        <div class="card-links">
+          <a href="https://kaif198.github.io/UNICEF-Data-Visualization/visualization.html" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        </div>
+      </article>
+
+      <!-- 10 -->
+      <article class="project-card" style="border-left-color: #073590;">
+        <h3>Ryanair Fuel Risk Analytics</h3>
+        <p class="card-context">Aviation fuel cost modelling and hedging strategy support</p>
+        <p>ETL pipeline loading raw fuel price and stock data into SQLite. ARIMA and Random Forest models generate combined forecasts (2021-2025) and identify the 15 worst high-fuel-risk months for hedging decisions.</p>
+        <p class="tech-stack">Python, pandas, numpy, SQL/SQLite, scikit-learn, Jupyter</p>
+        <div class="card-links">
+          <a href="https://github.com/Kaif198/ryanair-fuel-risk" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </article>
+
+      <!-- 11 -->
+      <article class="project-card" style="border-left-color: #1CABE2;">
+        <h3>UNICEF Tableau Child Displacement Dashboard</h3>
+        <p class="card-context">Enterprise BI version of displacement data for analyst workflows</p>
+        <p>Tableau dashboard with global trend lines, interactive choropleth maps with year sliders (2009-2023), country-level IDP drill-downs, and GDP per capita vs displacement scatter plots.</p>
+        <p class="tech-stack">Tableau, Data Visualization</p>
+        <div class="card-links">
+          <a href="https://public.tableau.com/app/profile/mohammed.kaif.ahmed/viz/KaifAhmedsIDPDashboard/Dashboard2" target="_blank" rel="noopener noreferrer">Tableau Public</a>
+        </div>
+      </article>
+
+      <!-- 12 -->
+      <article class="project-card" style="border-left-color: #DB0032;">
+        <h3>Red Bull Global POS Supply Chain Planning System (Excel)</h3>
+        <p class="card-context">EUR 2.9M POS spend, 20 markets, 10 suppliers, 10 POS categories</p>
+        <p>Enterprise-grade Excel workbook with 8 interconnected sheets: Master Data (170 orders), Supplier Directory with weighted tiering, Market Intelligence for 20 markets, Lookup &amp; Analysis Engine, 7 Pivot Table views, Executive Dashboard, Risk Register, and Scenario Planner.</p>
+        <p class="tech-stack">Advanced Excel (VLOOKUP, INDEX-MATCH, XLOOKUP, SUMIFS, NPV/IRR, Pivot Tables, conditional formatting)</p>
+        <div class="card-links">
+          <a href="https://github.com/Kaif198/Pos-RedBull-Excel" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </article>
+
+      <!-- 13 -->
+      <article class="project-card" style="border-left-color: #00508F;">
+        <h3>ALDI SUD Procurement Performance Excel Workbook</h3>
+        <p class="card-context">EUR 17.8M total spend, 25+ suppliers, 18 savings initiatives</p>
+        <p>7-tab analytical workbook with Executive Dashboard, Spend Analysis (YoY), Supplier Scorecard (weighted: quality 30%, delivery 25%, cost 25%, innovation 20%), Cost Savings Tracker (7.8% savings rate), Business Case Calculator (NPV/IRR/ROI with sensitivity analysis), and Budget vs Actual with quarterly variance commentary.</p>
+        <p class="tech-stack">Advanced Excel (SUMIFS, INDEX/MATCH, NPV/IRR, Weighted Averages, Pivot Tables)</p>
+        <div class="card-links">
+          <a href="https://github.com/Kaif198/ALDI-Procurement-Performance-Financial-Control-Dashboard_Excel-Analytics-Portfolio" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </article>
+
+      <!-- 14 -->
+      <article class="project-card" style="border-left-color: #00508F;">
+        <h3>ALDI SUD SAP Ariba P2P Process Intelligence</h3>
+        <p class="card-context">Purchase-to-pay cycle health monitoring and improvement tracking</p>
+        <p>Gives procurement leadership a 30-second health check on the full P2P cycle. Surfaces invoice exceptions before they escalate, tracks supplier performance trends over 6 months, and manages EUR 4M+ in continuous improvement initiatives.</p>
+        <p class="tech-stack">React, Tailwind CSS, Vercel</p>
+        <div class="card-links">
+          <a href="https://p2-p-sa-pariba-simulation.vercel.app/overview" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── EDUCATION ──────────────────────────────────────────────── -->
+<section id="education">
+  <div class="container">
+    <h2>Education</h2>
+
+    <article>
+      <h3>PG Diploma in Strategy Management</h3>
+      <p class="edu-meta">Dublin City University — Triple Crown Accredited (AACSB, EQUIS, AMBA) &nbsp;·&nbsp; Jan 2025 — Mar 2026</p>
+      <p class="edu-focus">Supply Chain Strategy, Operations Management, Business Analytics, Digital Transformation</p>
+    </article>
+
+    <article>
+      <h3>Bachelor of Commerce in Accounting &amp; Finance</h3>
+      <p class="edu-meta">Osmania University, Hyderabad &nbsp;·&nbsp; Jun 2020 — Aug 2023</p>
+      <p class="edu-focus">Financial Accounting, Cost Accounting, Business Economics, Quantitative Methods</p>
+    </article>
+
+    <h3 class="cert-heading">Certifications</h3>
+    <div class="tags">
+      <span class="tag">SAP Business Analyst (SAP)</span>
+      <span class="tag">Oracle Cloud &amp; AI Foundations (Oracle)</span>
+      <span class="tag">AI-Powered Finance &amp; Accounting (Coursera)</span>
+      <span class="tag">M&amp;A Valuation (Univ. of Illinois)</span>
+      <span class="tag">CSCMP SCPro Procurement</span>
+      <span class="tag">GenAI for Supply Chain (CSCMP)</span>
+      <span class="tag">SQL &amp; Relational Databases (IBM)</span>
+      <span class="tag">PostgreSQL Bootcamp (Udemy)</span>
+      <span class="tag">Project Management Foundations (Google)</span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     CONTACT / FOOTER
+     ============================================================ -->
+<footer id="contact">
+  <div class="container">
+    <h2>Let's Connect</h2>
+    <p>I am looking for roles in procurement, supply chain analytics, and data intelligence where I can bring this combination of strategic thinking, domain knowledge, and hands-on building capability to a team that values all three.</p>
+    <address>
+      <a href="mailto:kaifahmed6864@gmail.com">kaifahmed6864@gmail.com</a>
+      <a href="tel:+353894120412">+353 894120412</a>
+      <a href="https://linkedin.com/in/kaif-ahmed-bb972421a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/Kaif198" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </address>
+    <dl>
+      <dt>Location</dt>
+      <dd>Dublin, Ireland | Work Authorized in Ireland (Stamp 1G) | Open to International Relocation</dd>
+      <dt>Languages</dt>
+      <dd>English (C2) | Hindi (C2) | German (A1, committed to B1 by Q3 2026) | French (A1)</dd>
+      <dt>Availability</dt>
+      <dd>Immediate</dd>
+    </dl>
+    <p class="footer-line">Mohammed Kaif Ahmed — 2026</p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     SCRIPT
+     ============================================================ -->
+<script>
+(function () {
+  'use strict';
+
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ── Arrow spans in card links ───────────────────────────────── */
+  document.querySelectorAll('.card-links a').forEach(function (a) {
+    var arrow = document.createElement('span');
+    arrow.className = 'arrow';
+    arrow.setAttribute('aria-hidden', 'true');
+    arrow.textContent = '→';
+    a.appendChild(arrow);
+  });
+
+  /* ── Hamburger ───────────────────────────────────────────────── */
+  var nav       = document.querySelector('.nav');
+  var hamburger = document.querySelector('.hamburger');
+  if (hamburger && nav) {
+    hamburger.addEventListener('click', function () {
+      var open = nav.classList.toggle('nav-open');
+      hamburger.setAttribute('aria-expanded', open.toString());
+    });
+    document.querySelectorAll('.nav-links a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        nav.classList.remove('nav-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  /* ── Scroll progress bar ─────────────────────────────────────── */
+  var progBar   = document.getElementById('scroll-progress');
+  var brandName = document.querySelector('.nav-brand-name');
+
+  function onScroll() {
+    var sy  = window.scrollY || window.pageYOffset;
+    var sh  = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    if (progBar) progBar.style.width = (sh > 0 ? sy / sh * 100 : 0) + '%';
+
+    /* Nav background opacity */
+    var bg = Math.min(0.95, 0.5 + (sy / 200) * 0.45);
+    if (nav) nav.style.background = 'rgba(0,0,0,' + bg + ')';
+
+    /* Brand name shrinks as user scrolls past hero */
+    if (brandName) {
+      var fs = sy > 120 ? 16 : 20 - (sy / 120) * 4;
+      brandName.style.fontSize = fs.toFixed(1) + 'px';
+      brandName.style.transition = 'font-size 0.4s cubic-bezier(0.25,0.1,0.25,1)';
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ── Page load sequence ──────────────────────────────────────── */
+  (function pageLoad() {
+    if (reduced) return;
+
+    /* Hide nav immediately in JS so it fades in cinematically */
+    if (nav) { nav.style.opacity = '0'; nav.style.transition = 'opacity 0.6s ease'; }
+
+    /* Wrap h1 words in spans */
+    var h1 = document.querySelector('#hero h1');
+    if (h1) {
+      var words = h1.textContent.trim().split(' ');
+      h1.innerHTML = words.map(function (w) {
+        return '<span class="hero-word">' + w + '</span>';
+      }).join(' ');
+    }
+
+    var heroSub  = document.querySelector('.hero-sub');
+    var heroCtct = document.querySelector('.hero-contact');
+    if (heroSub)  { heroSub.style.opacity  = '0'; heroSub.style.transition  = 'opacity 0.8s cubic-bezier(0.0,0.0,0.2,1)'; }
+    if (heroCtct) { heroCtct.style.opacity = '0'; heroCtct.style.transition = 'opacity 0.5s cubic-bezier(0.0,0.0,0.2,1)'; }
+
+    /* Step 2 — nav */
+    setTimeout(function () { if (nav) nav.style.opacity = '1'; }, 300);
+
+    /* Step 3 — headline words */
+    document.querySelectorAll('.hero-word').forEach(function (w, i) {
+      setTimeout(function () { w.classList.add('w-in'); }, 600 + i * 150);
+    });
+
+    /* Step 4 — subheadline */
+    setTimeout(function () { if (heroSub)  heroSub.style.opacity  = '1'; }, 1200);
+
+    /* Step 5 — contact row */
+    setTimeout(function () { if (heroCtct) heroCtct.style.opacity = '1'; }, 1600);
+    /* Step 6 — canvas starts at 1800ms (handled in initCanvas) */
+  }());
+
+  /* ── Hero canvas ─────────────────────────────────────────────── */
+  (function initCanvas() {
+    var canvas = document.getElementById('hero-canvas');
+    var hero   = document.getElementById('hero');
+    if (!canvas || !hero || reduced) return;
+
+    var ctx    = canvas.getContext('2d');
+    var nodes  = [];
+    var pulses = [];
+    var active = false, raf = null, prevTs = 0;
+    var TICK   = 1000 / 30;
+    var cAlpha = 0, cStart = -1;
+    var mob    = window.innerWidth < 768;
+    var mX = -9999, mY = -9999, mOver = false;
+
+    function resize() {
+      canvas.width  = hero.offsetWidth;
+      canvas.height = hero.offsetHeight;
+      mob = window.innerWidth < 768;
+    }
+
+    function mkNode(hub) {
+      var spd = 0.05 + Math.random() * 0.1;
+      return {
+        bx: Math.random() * canvas.width,  by: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * spd,   vy: (Math.random() - 0.5) * spd,
+        px: Math.random() * Math.PI * 2,    py: Math.random() * Math.PI * 2,
+        fx: 0.003 + Math.random() * 0.004,  fy: 0.003 + Math.random() * 0.004,
+        ax: 5 + Math.random() * 12,         ay: 5 + Math.random() * 12,
+        x: 0, y: 0,
+        r:  hub ? 5 : 2 + Math.random() * 1.5,
+        hub: hub,
+        ba: hub ? 0.2 : 0.12,
+        a:  0,
+        glow: 0
+      };
+    }
+
+    function build() {
+      nodes = [];
+      var total = mob ? 22 : 45, hubs = mob ? 3 : 6;
+      for (var i = 0; i < total; i++) nodes.push(mkNode(i < hubs));
+    }
+
+    function spawnPulse(ts) {
+      if (pulses.length >= 3 || Math.random() > 0.008) return;
+      var fi = Math.floor(Math.random() * nodes.length);
+      var f  = nodes[fi], cd = f.hub ? 250 : 180;
+      var pool = [];
+      for (var i = 0; i < nodes.length; i++) {
+        if (i === fi) continue;
+        var dx = f.x - nodes[i].x, dy = f.y - nodes[i].y;
+        if (dx*dx + dy*dy < cd*cd) pool.push(i);
+      }
+      if (!pool.length) return;
+      var ti  = pool[Math.floor(Math.random() * pool.length)];
+      var dur = 1500 + Math.random() * 500;
+      pulses.push({ fi: fi, ti: ti, p: 0, spd: 1 / (dur / TICK), trail: [] });
+    }
+
+    function frame(ts) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      /* Canvas fade-in over 1.5s */
+      if (cStart < 0) cStart = ts;
+      cAlpha = Math.min(1, (ts - cStart) / 1500);
+      ctx.globalAlpha = cAlpha;
+
+      /* Grid */
+      ctx.strokeStyle = 'rgba(245,241,232,0.015)';
+      ctx.lineWidth = 0.5;
+      for (var gx = 0; gx < canvas.width; gx += 80) {
+        ctx.beginPath(); ctx.moveTo(gx, 0); ctx.lineTo(gx, canvas.height); ctx.stroke();
+      }
+      for (var gy = 0; gy < canvas.height; gy += 80) {
+        ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(canvas.width, gy); ctx.stroke();
+      }
+
+      /* Update nodes */
+      for (var i = 0; i < nodes.length; i++) {
+        var n = nodes[i];
+        n.bx += n.vx; n.by += n.vy;
+        if (n.bx < -30) n.bx = canvas.width + 30;
+        if (n.bx > canvas.width  + 30) n.bx = -30;
+        if (n.by < -30) n.by = canvas.height + 30;
+        if (n.by > canvas.height + 30) n.by = -30;
+        n.px += n.fx; n.py += n.fy;
+        n.x = n.bx + Math.sin(n.px) * n.ax;
+        n.y = n.by + Math.sin(n.py) * n.ay;
+        n.a = n.ba;
+
+        /* Mouse pull */
+        if (mOver && !mob) {
+          var mdx = mX - n.x, mdy = mY - n.y, md2 = mdx*mdx + mdy*mdy;
+          if (md2 < 22500) {
+            var md = Math.sqrt(md2), pull = (150 - md) / 150 * 0.3;
+            n.x += (mdx / md) * pull * 6;
+            n.y += (mdy / md) * pull * 6;
+            if (md < 100) n.a = 0.25;
+          }
+        }
+
+        /* Glow decay */
+        if (n.glow > 0) {
+          var ge = ts - n.glow;
+          if (ge < 800) n.a = n.ba + (0.35 - n.ba) * (1 - ge / 800);
+          else          n.glow = 0;
+        }
+      }
+
+      /* Connections */
+      for (var i = 0; i < nodes.length; i++) {
+        var ni = nodes[i], cd = ni.hub ? 250 : 180;
+        for (var j = i + 1; j < nodes.length; j++) {
+          var nj = nodes[j];
+          var dx = ni.x - nj.x, dy = ni.y - nj.y, d2 = dx*dx + dy*dy;
+          if (d2 < cd*cd) {
+            var la = (1 - Math.sqrt(d2)/cd) * (ni.hub || nj.hub ? 0.08 : 0.05);
+            ctx.beginPath(); ctx.moveTo(ni.x, ni.y); ctx.lineTo(nj.x, nj.y);
+            ctx.strokeStyle = 'rgba(245,241,232,' + la + ')';
+            ctx.lineWidth = 0.5; ctx.stroke();
+          }
+        }
+      }
+
+      /* Mouse connections */
+      if (mOver && !mob) {
+        for (var i = 0; i < nodes.length; i++) {
+          var n = nodes[i];
+          var dx = mX - n.x, dy = mY - n.y, d2 = dx*dx + dy*dy;
+          if (d2 < 22500) {
+            var la = (1 - Math.sqrt(d2)/150) * 0.06;
+            ctx.beginPath(); ctx.moveTo(n.x, n.y); ctx.lineTo(mX, mY);
+            ctx.strokeStyle = 'rgba(245,241,232,' + la + ')';
+            ctx.lineWidth = 0.5; ctx.stroke();
+          }
+        }
+      }
+
+      /* Data flow pulses */
+      spawnPulse(ts);
+      pulses = pulses.filter(function (p) {
+        p.p = Math.min(1, p.p + p.spd);
+        var fn = nodes[p.fi], tn = nodes[p.ti];
+        var cx = fn.x + (tn.x - fn.x) * p.p;
+        var cy = fn.y + (tn.y - fn.y) * p.p;
+        p.trail.push({ x: cx, y: cy });
+        if (p.trail.length > 14) p.trail.shift();
+        /* Trail */
+        for (var t = 0; t < p.trail.length; t++) {
+          var ta = (t / p.trail.length) * 0.3;
+          var tr = (t / p.trail.length) * 2.5;
+          ctx.beginPath();
+          ctx.arc(p.trail[t].x, p.trail[t].y, tr, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(245,241,232,' + ta + ')'; ctx.fill();
+        }
+        /* Head dot */
+        ctx.beginPath(); ctx.arc(cx, cy, 3.5, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(245,241,232,0.5)'; ctx.fill();
+        if (p.p >= 1) { tn.glow = ts; return false; }
+        return true;
+      });
+
+      /* Nodes */
+      for (var i = 0; i < nodes.length; i++) {
+        var n = nodes[i];
+        ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(245,241,232,' + n.a + ')'; ctx.fill();
+      }
+
+      ctx.globalAlpha = 1;
+    }
+
+    function loop(ts) {
+      if (!active) return;
+      raf = requestAnimationFrame(loop);
+      if (ts - prevTs < TICK) return;
+      prevTs = ts;
+      frame(ts);
+    }
+    function play()  { if (active) return; active = true; raf = requestAnimationFrame(loop); }
+    function pause() { active = false; if (raf) { cancelAnimationFrame(raf); raf = null; } }
+
+    /* Mouse tracking */
+    if (!mob && !('ontouchstart' in window)) {
+      hero.addEventListener('mousemove', function (e) {
+        var r = canvas.getBoundingClientRect();
+        mX = e.clientX - r.left; mY = e.clientY - r.top; mOver = true;
+      }, { passive: true });
+      hero.addEventListener('mouseleave', function () { mOver = false; mX = -9999; mY = -9999; });
+    }
+
+    /* Pause when off-screen */
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        entries[0].isIntersecting ? play() : pause();
+      }, { threshold: 0 }).observe(hero);
+    } else { play(); }
+
+    var rtimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(rtimer);
+      rtimer = setTimeout(function () { resize(); build(); }, 200);
+    });
+
+    resize(); build();
+    setTimeout(play, 1800); /* begins in sync with load sequence step 6 */
+  }());
+
+  /* ── Section scroll animations ───────────────────────────────── */
+  (function initScroll() {
+    var hasIO = 'IntersectionObserver' in window;
+
+    function once(el, fn, thresh) {
+      if (!hasIO) { fn(el); return; }
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          fn(e.target); obs.unobserve(e.target);
+        });
+      }, { threshold: thresh || 0.08 });
+      obs.observe(el);
+    }
+    function delay(fn, ms) { setTimeout(fn, ms); }
+
+    /* ABOUT */
+    var aboutSec = document.getElementById('about');
+    if (aboutSec) {
+      var photo   = aboutSec.querySelector('.about-photo');
+      var content = aboutSec.querySelector('.about-content');
+      var ps      = content ? content.querySelectorAll('p') : [];
+      var tags    = aboutSec.querySelectorAll('.tag');
+      if (photo) photo.classList.add('anim-left');
+      ps.forEach(function (p) { p.classList.add('anim-right'); });
+      once(aboutSec, function () {
+        if (photo) delay(function () { photo.classList.add('anim-in'); }, 0);
+        ps.forEach(function (p, i) {
+          delay(function () { p.classList.add('anim-in'); }, 150 + i * 120);
+        });
+        tags.forEach(function (t, i) {
+          t.classList.add('anim-tag');
+          delay(function () { t.classList.add('anim-in'); }, 500 + i * 50);
+        });
+      });
+    }
+
+    /* EXPERIENCE */
+    var expSec = document.getElementById('experience');
+    if (expSec) {
+      var roles   = expSec.querySelectorAll('article');
+      var impacts = expSec.querySelectorAll('.impact');
+      roles.forEach(function (r) { r.classList.add('anim-up'); });
+      impacts.forEach(function (imp) {
+        imp.style.opacity   = '0';
+        imp.style.transform = 'translateX(-8px)';
+        imp.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      });
+      once(expSec, function () {
+        roles.forEach(function (r, i) {
+          delay(function () { r.classList.add('anim-in'); }, i * 150);
+        });
+        impacts.forEach(function (imp, i) {
+          delay(function () {
+            imp.style.opacity   = '1';
+            imp.style.transform = 'translateX(0)';
+          }, 550 + i * 150);
+        });
+      }, 0.05);
+    }
+
+    /* PROJECTS */
+    var projSec = document.getElementById('projects');
+    if (projSec) {
+      var subtitle  = projSec.querySelector('.section-subtitle');
+      var savedText = subtitle ? subtitle.textContent : '';
+      var pcards    = projSec.querySelectorAll('.project-card');
+      pcards.forEach(function (c) { c.classList.add('anim-up'); });
+
+      /* Typewriter setup */
+      var cursor = null;
+      if (subtitle) {
+        subtitle.textContent = '';
+        cursor = document.createElement('span');
+        cursor.className = 'tw-cursor';
+        subtitle.appendChild(cursor);
+      }
+
+      once(projSec, function () {
+        /* Typewriter */
+        if (subtitle && savedText && cursor) {
+          var chars = savedText.split(''), ci = 0;
+          var iv = setInterval(function () {
+            if (ci < chars.length) {
+              subtitle.insertBefore(document.createTextNode(chars[ci++]), cursor);
+            } else {
+              clearInterval(iv);
+              var blinks = 0;
+              var biv = setInterval(function () {
+                cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+                if (++blinks >= 6) { clearInterval(biv); cursor.remove(); }
+              }, 400);
+            }
+          }, 40);
+        }
+        /* Grid-aware card stagger */
+        var desktop = window.innerWidth >= 768;
+        pcards.forEach(function (c, idx) {
+          var d = desktop
+            ? Math.floor(idx / 2) * 120 + (idx % 2) * 100
+            : idx * 70;
+          delay(function () { c.classList.add('anim-in'); }, 300 + d);
+        });
+      }, 0.04);
+    }
+
+    /* EDUCATION */
+    var eduSec = document.getElementById('education');
+    if (eduSec) {
+      var earts = eduSec.querySelectorAll('article');
+      var ctags = eduSec.querySelectorAll('.tag');
+      earts.forEach(function (a) { a.classList.add('anim-up'); });
+      once(eduSec, function () {
+        earts.forEach(function (a, i) {
+          delay(function () { a.classList.add('anim-in'); }, i * 150);
+        });
+        ctags.forEach(function (t, i) {
+          t.classList.add('anim-tag');
+          delay(function () { t.classList.add('anim-in'); }, 400 + i * 50);
+        });
+      });
+    }
+
+    /* FOOTER / CONTACT */
+    var footerEl = document.getElementById('contact');
+    if (footerEl) {
+      var fh2    = footerEl.querySelector('h2');
+      var flinks = footerEl.querySelectorAll('address a');
+      if (fh2) fh2.classList.add('anim-up');
+      flinks.forEach(function (a) { a.classList.add('anim-up'); });
+      once(footerEl, function () {
+        if (fh2) delay(function () { fh2.classList.add('anim-in'); }, 0);
+        flinks.forEach(function (a, i) {
+          delay(function () { a.classList.add('anim-in'); }, 200 + i * 100);
+        });
+      });
+    }
+  }());
+
+}());
+</script>
+
+</body>
+</html>
