@@ -4,14 +4,17 @@
 <!-- ============================================================
      HEAD
      ============================================================ -->
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mohammed Kaif Ahmed — Business Analyst with a PG Diploma in Strategy Management (DCU Business School) and 4+ years across FMCG, retail, and e-commerce. Supply chain intelligence, procurement analytics, and data engineering.">
+  <meta name="description"
+    content="Mohammed Kaif Ahmed — Business Analyst with a PG Diploma in Strategy Management (DCU Business School) and 4+ years across FMCG, retail, and e-commerce. Supply chain intelligence, procurement analytics, and data engineering.">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Mohammed Kaif Ahmed — Portfolio">
-  <meta property="og:description" content="Business Analyst with a PG Diploma in Strategy Management (DCU) and 4+ years of experience in supply chain planning, scenario modelling, and operational analytics.">
+  <meta property="og:description"
+    content="Business Analyst with a PG Diploma in Strategy Management (DCU) and 4+ years of experience in supply chain planning, scenario modelling, and operational analytics.">
   <meta property="og:type" content="website">
 
   <title>Mohammed Kaif Ahmed — Portfolio</title>
@@ -19,34 +22,49 @@
   <!-- Google Fonts: Playfair Display + Lato -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet">
 
   <style>
-/* ── Design Tokens ─────────────────────────────────────────── */
+    /* ── Design Tokens ─────────────────────────────────────────── */
     :root {
-      --bg:       #000000;
-      --surface:  #1a1a1a;
-      --text:     #f5f1e8;
-      --secondary:rgba(245, 241, 232, 0.5);
-      --border:   rgba(245, 241, 232, 0.1);
-      --tag-bg:   rgba(245, 241, 232, 0.08);
-      --serif:    'Playfair Display', 'Times New Roman', Georgia, serif;
-      --sans:     'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      --mono:     'SF Mono', 'JetBrains Mono', 'Fira Code', monospace;
+      --bg: #000000;
+      --surface: #1a1a1a;
+      --text: #f5f1e8;
+      --secondary: rgba(245, 241, 232, 0.5);
+      --border: rgba(245, 241, 232, 0.1);
+      --tag-bg: rgba(245, 241, 232, 0.08);
+      --serif: 'Playfair Display', 'Times New Roman', Georgia, serif;
+      --sans: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --mono: 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace;
     }
 
     /* ── Reset ─────────────────────────────────────────────────── */
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
     /* ── Scrollbar ──────────────────────────────────────────────── */
-    ::-webkit-scrollbar           { width: 8px; }
-    ::-webkit-scrollbar-track     { background: #000; }
-    ::-webkit-scrollbar-thumb     { background: #333; }
-    ::-webkit-scrollbar-thumb:hover { background: #444; }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #000;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #333;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #444;
+    }
 
     /* ── Selection ──────────────────────────────────────────────── */
     ::selection {
@@ -68,14 +86,21 @@
       line-height: 1.7;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-family: var(--serif);
       font-weight: 400;
       line-height: 1.2;
       letter-spacing: 0.02em;
     }
 
-    code, pre, .tech-stack {
+    code,
+    pre,
+    .tech-stack {
       font-family: var(--mono);
     }
 
@@ -236,8 +261,10 @@
 
     #hero-canvas {
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       z-index: 0;
       pointer-events: none;
     }
@@ -506,7 +533,7 @@
       margin-bottom: 14px;
     }
 
-    .project-card > p:not(.card-context):not(.tech-stack) {
+    .project-card>p:not(.card-context):not(.tech-stack) {
       color: var(--secondary);
       font-size: 14px;
       line-height: 1.6;
@@ -665,7 +692,8 @@
     /* ── Scroll Progress Bar ────────────────────────────────────── */
     #scroll-progress {
       position: fixed;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       height: 1px;
       width: 0%;
       background: var(--text);
@@ -680,45 +708,66 @@
       opacity: 0;
       transform: translateY(15px);
       transition: opacity 0.5s cubic-bezier(0.0, 0.0, 0.2, 1),
-                  transform 0.5s cubic-bezier(0.0, 0.0, 0.2, 1);
+        transform 0.5s cubic-bezier(0.0, 0.0, 0.2, 1);
     }
-    .hero-word.w-in { opacity: 1; transform: translateY(0); }
+
+    .hero-word.w-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     /* ── Nav Underline Draw ──────────────────────────────────────── */
     @media (min-width: 768px) {
-      .nav-links a { position: relative; padding-bottom: 3px; }
+      .nav-links a {
+        position: relative;
+        padding-bottom: 3px;
+      }
+
       .nav-links a::after {
         content: '';
         position: absolute;
-        bottom: 0; left: 0;
-        width: 0; height: 1px;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
         background: var(--text);
         transition: width 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
       }
-      .nav-links a:hover::after { width: 100%; }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
     }
 
     /* ── Project Card Hover ──────────────────────────────────────── */
     .project-card {
       transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
-                  background-color 0.3s ease,
-                  box-shadow 0.3s ease;
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
     }
+
     .project-card:hover {
       transform: translateY(-4px);
       background-color: #1e1e1e;
       box-shadow: -6px 0 20px rgba(245, 241, 232, 0.04);
     }
-    .project-card h3 { transition: color 0.3s ease; }
-    .project-card:hover h3 { color: #ffffff; }
+
+    .project-card h3 {
+      transition: color 0.3s ease;
+    }
+
+    .project-card:hover h3 {
+      color: #ffffff;
+    }
 
     .card-links a {
       display: inline-flex;
       align-items: center;
       gap: 0;
       transition: opacity 0.3s ease,
-                  transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+        transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
     }
+
     .card-links a .arrow {
       display: inline-block;
       opacity: 0;
@@ -726,7 +775,11 @@
       transition: opacity 0.3s ease, transform 0.3s ease;
       margin-left: 4px;
     }
-    .project-card:hover .card-links a { transform: translateX(4px); }
+
+    .project-card:hover .card-links a {
+      transform: translateX(4px);
+    }
+
     .project-card:hover .card-links a .arrow {
       opacity: 1;
       transform: translateX(0);
@@ -735,52 +788,72 @@
     /* ── Tag Hover ───────────────────────────────────────────────── */
     .tag {
       transition: background 0.3s ease,
-                  transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+        transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
       cursor: default;
     }
+
     .tag:hover {
       background: rgba(245, 241, 232, 0.15);
       transform: scale(1.03);
     }
 
     /* ── Address Link Hover ──────────────────────────────────────── */
-    address a { position: relative; padding-bottom: 2px; }
-    address a:hover { text-decoration: none; }
+    address a {
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    address a:hover {
+      text-decoration: none;
+    }
+
     address a::after {
       content: '';
       position: absolute;
-      bottom: 0; left: 0;
-      width: 0; height: 1px;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
       background: var(--text);
       transition: width 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
     }
-    address a:hover::after { width: 100%; }
+
+    address a:hover::after {
+      width: 100%;
+    }
 
     /* ── Scroll Animation Classes ────────────────────────────────── */
     .anim-up {
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.8s cubic-bezier(0.0, 0.0, 0.2, 1),
-                  transform 0.8s cubic-bezier(0.0, 0.0, 0.2, 1);
+        transform 0.8s cubic-bezier(0.0, 0.0, 0.2, 1);
     }
+
     .anim-left {
       opacity: 0;
       transform: translateX(-40px);
       transition: opacity 1s cubic-bezier(0.0, 0.0, 0.2, 1),
-                  transform 1s cubic-bezier(0.0, 0.0, 0.2, 1);
+        transform 1s cubic-bezier(0.0, 0.0, 0.2, 1);
     }
+
     .anim-right {
       opacity: 0;
       transform: translateX(40px);
       transition: opacity 1s cubic-bezier(0.0, 0.0, 0.2, 1),
-                  transform 1s cubic-bezier(0.0, 0.0, 0.2, 1);
+        transform 1s cubic-bezier(0.0, 0.0, 0.2, 1);
     }
+
     .anim-tag {
       opacity: 0;
       transform: translateY(10px);
       transition: opacity 0.4s ease, transform 0.4s ease;
     }
-    .anim-in { opacity: 1 !important; transform: none !important; }
+
+    .anim-in {
+      opacity: 1 !important;
+      transform: none !important;
+    }
 
     /* ── Typewriter Cursor ───────────────────────────────────────── */
     .tw-cursor {
@@ -792,9 +865,17 @@
       vertical-align: text-bottom;
       animation: twblink 0.7s step-end infinite;
     }
+
     @keyframes twblink {
-      0%, 100% { opacity: 1; }
-      50%       { opacity: 0; }
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
     }
 
     /* ── Focus Styles ───────────────────────────────────────────── */
@@ -806,13 +887,24 @@
 
     /* ── prefers-reduced-motion ──────────────────────────────────── */
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
+
+      *,
+      *::before,
+      *::after {
         transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
       }
-      #hero-canvas { display: none !important; }
-      .hero-word, .anim-up, .anim-left, .anim-right, .anim-tag {
+
+      #hero-canvas {
+        display: none !important;
+      }
+
+      .hero-word,
+      .anim-up,
+      .anim-left,
+      .anim-right,
+      .anim-tag {
         opacity: 1 !important;
         transform: none !important;
       }
@@ -823,609 +915,711 @@
 <!-- ============================================================
      BODY
      ============================================================ -->
-<body>
-<div id="scroll-progress" aria-hidden="true"></div>
 
-<!-- ============================================================
+<body>
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ============================================================
      NAV
      ============================================================ -->
-<header>
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a href="#hero" class="nav-brand">
-        <span class="nav-brand-name">Mohammed Kaif Ahmed</span>
-        <span class="nav-brand-sub">Supply Chain Intelligence</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
-    </div>
-  </nav>
-</header>
+  <header>
+    <nav class="nav">
+      <div class="container nav-inner">
+        <a href="#hero" class="nav-brand">
+          <span class="nav-brand-name">Mohammed Kaif Ahmed</span>
+          <span class="nav-brand-sub">Supply Chain Intelligence</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      </div>
+    </nav>
+  </header>
 
-<!-- ============================================================
+  <!-- ============================================================
      MAIN
      ============================================================ -->
-<main>
+  <main>
 
-<!-- ── HERO ─────────────────────────────────────────────────── -->
-<section id="hero">
-  <div class="container">
-    <h1>Supply Chain Intelligence. Procurement Analytics. Data Engineering.</h1>
-    <p class="hero-sub">Business Analyst with a PG Diploma in Strategy Management (DCU Business School) and 4+ years of experience in supply chain planning, scenario modelling, and operational analytics across FMCG, retail, and e-commerce environments. I build tools that solve real operational problems, from demand forecasting models to procurement intelligence platforms.</p>
-    <p class="hero-contact">
-      Dublin, Ireland
-      &nbsp;&nbsp;|&nbsp;&nbsp;
-      <a href="mailto:kaifahmed6864@gmail.com">kaifahmed6864@gmail.com</a>
-      &nbsp;&nbsp;|&nbsp;&nbsp;
-      <a href="tel:+353894120412">+353 894120412</a>
-      &nbsp;&nbsp;|&nbsp;&nbsp;
-      <a href="https://linkedin.com/in/kaif-ahmed-bb972421a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      &nbsp;&nbsp;|&nbsp;&nbsp;
-      <a href="https://github.com/Kaif198" target="_blank" rel="noopener noreferrer">GitHub</a>
-    </p>
-  </div>
-</section>
-
-<!-- ── ABOUT ─────────────────────────────────────────────────── -->
-<section id="about">
-  <div class="container">
-    <h2>About</h2>
-    <div class="about-layout">
-      <div class="about-photo">
-        <img src="KAIF_PORTRAIT.jpeg" alt="Mohammed Kaif Ahmed">
+    <!-- ── HERO ─────────────────────────────────────────────────── -->
+    <section id="hero">
+      <div class="container">
+        <h1>Supply Chain Intelligence. Procurement Analytics. Data Engineering.</h1>
+        <p class="hero-sub">Business Analyst with a PG Diploma in Strategy Management (DCU Business School) and 4+ years
+          of experience in supply chain planning, scenario modelling, and operational analytics across FMCG, retail, and
+          e-commerce environments. I build tools that solve real operational problems, from demand forecasting models to
+          procurement intelligence platforms.</p>
+        <p class="hero-contact">
+          Dublin, Ireland
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="mailto:kaifahmed6864@gmail.com">kaifahmed6864@gmail.com</a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="tel:+353894120412">+353 894120412</a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="https://linkedin.com/in/kaif-ahmed-bb972421a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="https://github.com/Kaif198" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </p>
       </div>
-      <div class="about-content">
-    <p>I build tools that solve real operational problems. Every project in my portfolio started with a specific business challenge: delivery networks with no real-time visibility, quality defects caught too late, procurement teams drowning in manual data validation, or executives making decisions without the numbers they need.</p>
-    <p>What ties them together is a simple belief: if you have the right strategic lens and understand the business problem deeply enough, AI and modern tech become incredibly powerful accelerators. I use tools like Claude Code, Cursor AI, and GitHub Copilot not as shortcuts, but as force multipliers for domain expertise built across procurement, supply chain, and operations.</p>
-    <div class="tags">
-      <span class="tag">Demand Forecasting (ARIMA, SARIMA, Prophet, Random Forest)</span>
-      <span class="tag">S&amp;OP / S&amp;OE Support</span>
-      <span class="tag">Scenario Modelling</span>
-      <span class="tag">Volume &amp; Allocation Planning</span>
-      <span class="tag">Inventory Optimisation</span>
-      <span class="tag">Capacity Planning</span>
-      <span class="tag">Advanced Excel (VBA Macros, Power Query, Pivots, SUMIFS, INDEX/MATCH, XLOOKUP, NPV/IRR)</span>
-      <span class="tag">SQL (PostgreSQL)</span>
-      <span class="tag">Python (Pandas, NumPy, Scikit-learn, PuLP)</span>
-      <span class="tag">Power BI</span>
-      <span class="tag">Tableau</span>
-      <span class="tag">SAP (MM/SD/ERP)</span>
-      <span class="tag">Oracle Cloud</span>
-      <span class="tag">n8n Automation</span>
-      <span class="tag">KPI Design &amp; Monitoring</span>
-      <span class="tag">Process Documentation &amp; Redesign</span>
-      <span class="tag">What-If &amp; Sensitivity Analysis</span>
-      <span class="tag">Cost-Benefit Analysis</span>
-      <span class="tag">Data Storytelling</span>
-      <span class="tag">Cross-Functional Stakeholder Management</span>
-    </div>
-      </div><!-- end .about-content -->
-    </div><!-- end .about-layout -->
-  </div>
-</section>
+    </section>
 
-<!-- ── EXPERIENCE ────────────────────────────────────────────── -->
-<section id="experience">
-  <div class="container">
-    <h2>Experience</h2>
-
-    <article>
-      <div class="role-header">
-        <div class="role-header-left">
-          <h3>Team Lead — Operations, Supply Chain Planning &amp; Procurement</h3>
-          <span class="company">Oakberry | Dublin, Ireland</span>
-        </div>
-        <span class="date">Oct 2025 — Jan 2026</span>
+    <!-- ── ABOUT ─────────────────────────────────────────────────── -->
+    <section id="about">
+      <div class="container">
+        <h2>About</h2>
+        <div class="about-layout">
+          <div class="about-photo">
+            <img src="KAIF_PORTRAIT.jpeg" alt="Mohammed Kaif Ahmed">
+          </div>
+          <div class="about-content">
+            <p>I build tools that solve real operational problems. Every project in my portfolio started with a specific
+              business challenge: delivery networks with no real-time visibility, quality defects caught too late,
+              procurement teams drowning in manual data validation, or executives making decisions without the numbers
+              they need.</p>
+            <p>What ties them together is a simple belief: if you have the right strategic lens and understand the
+              business problem deeply enough, AI and modern tech become incredibly powerful accelerators. I use tools
+              like Claude Code, Cursor AI, and GitHub Copilot not as shortcuts, but as force multipliers for domain
+              expertise built across procurement, supply chain, and operations.</p>
+            <div class="tags">
+              <span class="tag">Demand Forecasting (ARIMA, SARIMA, Prophet, Random Forest)</span>
+              <span class="tag">S&amp;OP / S&amp;OE Support</span>
+              <span class="tag">Scenario Modelling</span>
+              <span class="tag">Volume &amp; Allocation Planning</span>
+              <span class="tag">Inventory Optimisation</span>
+              <span class="tag">Capacity Planning</span>
+              <span class="tag">Advanced Excel (VBA Macros, Power Query, Pivots, SUMIFS, INDEX/MATCH, XLOOKUP,
+                NPV/IRR)</span>
+              <span class="tag">SQL (PostgreSQL)</span>
+              <span class="tag">Python (Pandas, NumPy, Scikit-learn, PuLP)</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">Tableau</span>
+              <span class="tag">SAP (MM/SD/ERP)</span>
+              <span class="tag">Oracle Cloud</span>
+              <span class="tag">n8n Automation</span>
+              <span class="tag">KPI Design &amp; Monitoring</span>
+              <span class="tag">Process Documentation &amp; Redesign</span>
+              <span class="tag">What-If &amp; Sensitivity Analysis</span>
+              <span class="tag">Cost-Benefit Analysis</span>
+              <span class="tag">Data Storytelling</span>
+              <span class="tag">Cross-Functional Stakeholder Management</span>
+            </div>
+          </div><!-- end .about-content -->
+        </div><!-- end .about-layout -->
       </div>
-      <div class="role-body">
-        <p>Developed operational planning models across 8 locations, analysing volume patterns, supplier lead times, and fulfilment bottlenecks to support data-driven replenishment and capacity decisions. Built a 25+ KPI analytics framework with automated dashboards that cut reporting cycles by 60% and gave leadership real-time planning visibility.</p>
-        <p>Evaluated supply chain scenarios using TCO modelling and what-if analysis, consolidating 12 suppliers to 7 strategic partners and delivering EUR 45K annualised savings (15% cost reduction) while improving on-time delivery from 82% to 96%.</p>
-        <p>Built demand forecasting models (Python/Scikit-learn) improving inventory accuracy by 25% and eliminating EUR 18K annual waste. Created weighted supplier scorecards and spend dashboards surfacing EUR 12K+ in hidden inefficiencies, driving 18% supplier performance uplift.</p>
-        <p>Documented planning processes, defined best practices for procurement workflows, and onboarded new team members with structured SOPs, ensuring continuity and operational transparency across locations.</p>
+    </section>
+
+    <!-- ── EXPERIENCE ────────────────────────────────────────────── -->
+    <section id="experience">
+      <div class="container">
+        <h2>Experience</h2>
+
+        <article>
+          <div class="role-header">
+            <div class="role-header-left">
+              <h3>Team Lead — Operations, Supply Chain Planning &amp; Procurement</h3>
+              <span class="company">Oakberry | Dublin, Ireland</span>
+            </div>
+            <span class="date">Oct 2025 — Jan 2026</span>
+          </div>
+          <div class="role-body">
+            <p>Developed operational planning models across 8 locations, analysing volume patterns, supplier lead times,
+              and fulfilment bottlenecks to support data-driven replenishment and capacity decisions. Built a 25+ KPI
+              analytics framework with automated dashboards that cut reporting cycles by 60% and gave leadership
+              real-time planning visibility.</p>
+            <p>Evaluated supply chain scenarios using TCO modelling and what-if analysis, consolidating 12 suppliers to
+              7 strategic partners and delivering EUR 45K annualised savings (15% cost reduction) while improving
+              on-time delivery from 82% to 96%.</p>
+            <p>Built demand forecasting models (Python/Scikit-learn) improving inventory accuracy by 25% and eliminating
+              EUR 18K annual waste. Created weighted supplier scorecards and spend dashboards surfacing EUR 12K+ in
+              hidden inefficiencies, driving 18% supplier performance uplift.</p>
+            <p>Documented planning processes, defined best practices for procurement workflows, and onboarded new team
+              members with structured SOPs, ensuring continuity and operational transparency across locations.</p>
+          </div>
+          <p class="impact">EUR 63K+ verified savings &nbsp;|&nbsp; 35% efficiency gain &nbsp;|&nbsp; 8-location
+            planning &amp; scenario analytics</p>
+        </article>
+
+        <article>
+          <div class="role-header">
+            <div class="role-header-left">
+              <h3>Junior Supply Chain &amp; Planning Analyst</h3>
+              <span class="company">Shoppers Stop | Hyderabad, India</span>
+            </div>
+            <span class="date">Jan 2023 — Oct 2024</span>
+          </div>
+          <div class="role-body">
+            <p>Built multi-variable demand forecasting models (92% accuracy) across channels, categories, and SKUs,
+              improving buy-plan efficiency by 15% and optimising INR 2.4M in planning decisions. Methodology
+              transferable to volume assumption and allocation planning.</p>
+            <p>Rationalised supplier base from 45 to 32 vendors using Kraljic Matrix and Porter's Five Forces,
+              negotiating terms that reduced acquisition costs by 12%. Built inventory dashboards reducing excess stock
+              by 35% (INR 180K capital release).</p>
+            <p>Maintained planning master data accuracy across 12 locations and coordinated data handovers between
+              buying, warehousing, and distribution teams to ensure synchronised replenishment.</p>
+          </div>
+          <p class="impact">INR 245K+ working capital improvement &nbsp;|&nbsp; 29% vendor rationalisation &nbsp;|&nbsp;
+            12-location planning analytics</p>
+        </article>
+
+        <article>
+          <div class="role-header">
+            <div class="role-header-left">
+              <h3>Customer Operations Associate — Cross-Border Logistics</h3>
+              <span class="company">Amazon | Remote (EU/USA/GCC)</span>
+            </div>
+            <span class="date">Sep 2021 — Nov 2022</span>
+          </div>
+          <div class="role-body">
+            <p>Analysed cross-border fulfilment workflows across EU, USA, and GCC markets, identifying process
+              exceptions and data quality gaps that drove a 15% improvement in delivery performance. Built vendor
+              compliance KPI framework enabling data-driven supplier evaluation at global scale.</p>
+            <p>Prepared structured process improvement recommendations for internal stakeholders, reducing exception
+              handling time and supporting planning synchronisation across multi-market supply chain operations.</p>
+          </div>
+        </article>
+
       </div>
-      <p class="impact">EUR 63K+ verified savings &nbsp;|&nbsp; 35% efficiency gain &nbsp;|&nbsp; 8-location planning &amp; scenario analytics</p>
-    </article>
+    </section>
 
-    <article>
-      <div class="role-header">
-        <div class="role-header-left">
-          <h3>Junior Supply Chain &amp; Planning Analyst</h3>
-          <span class="company">Shoppers Stop | Hyderabad, India</span>
+    <!-- ── PROJECTS ───────────────────────────────────────────────── -->
+    <section id="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <p class="section-subtitle">16 live projects. Each one deployed, clickable, and built to demonstrate how I think
+          about problems.</p>
+        <div class="projects-grid">
+
+          <!-- 01 -->
+          <article class="project-card" style="border-left-color: #FF9900;">
+            <h3>Amazon EU Operations Portal</h3>
+            <p class="card-context">Last-mile delivery intelligence across 15 stations, 7 EU countries</p>
+            <p>Central operations dashboard with LSTM neural network volume forecasting (TensorFlow.js), capacity
+              planning simulator, and station risk matrix. Replaces manual spreadsheet tracking with real-time
+              AI-generated executive insights.</p>
+            <p class="tech-stack">React 19, Vite, Recharts, Framer Motion, TensorFlow.js</p>
+            <div class="card-links">
+              <a href="https://amazon-eu-operations-portal-git-main-kaif-ahmeds-projects.vercel.app/" target="_blank"
+                rel="noopener noreferrer">Live Demo</a>
+              <a href="https://github.com/Kaif198/Amazon-EU-Operations-Portal" target="_blank"
+                rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <!-- 02 -->
+          <article class="project-card" style="border-left-color: #DB0032;">
+            <h3>Red Bull Quality Performance Intelligence</h3>
+            <p class="card-context">FMCG quality monitoring across 6 facilities and 8 suppliers</p>
+            <p>Early warning system using Holt-Winters forecasting, CUSUM process control, and anomaly detection. Every
+              model outputs plain-English narratives explaining the risk, the evidence, and the recommended action.</p>
+            <p class="tech-stack">React, Plotly.js, JavaScript (client-side ML)</p>
+            <div class="card-links">
+              <a href="https://cozy-zabaione-17bc6d.netlify.app/" target="_blank" rel="noopener noreferrer">Live
+                Demo</a>
+            </div>
+          </article>
+
+          <!-- 03 -->
+          <article class="project-card" style="border-left-color: #00508F;">
+            <h3>ALDI SUD Supply Chain Intelligence Pipeline</h3>
+            <p class="card-context">Automated supplier data validation and enrichment</p>
+            <p>n8n workflow orchestration pipeline with 10 connected nodes and a 6-rule validation engine. Catches
+              invalid delivery dates, impossible weights, and mismatched SKUs before they corrupt downstream planning.
+            </p>
+            <p class="tech-stack">n8n (Railway), Neon PostgreSQL, React + Vite, Recharts, Tailwind CSS</p>
+            <div class="card-links">
+              <a href="https://n8n-workflow-aldi.vercel.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
+            </div>
+          </article>
+
+          <!-- 04 -->
+          <article class="project-card" style="border-left-color: #00508F;">
+            <h3>ALDI SUD Financial Services Procurement Platform</h3>
+            <p class="card-context">EUR 47.3M vendor spend across 7 procurement categories</p>
+            <p>End-to-end procurement intelligence covering vendor onboarding through spend forecasting and risk
+              monitoring. Uses ARIMA time-series forecasting and Random Forest vendor risk modelling (89.3% accuracy).
+              Flags vendors with expired ISO certifications.</p>
+            <p class="tech-stack">React.js, Tailwind CSS, Recharts, Python ML models, Vercel</p>
+            <div class="card-links">
+              <a href="https://finserv-procure-intel.vercel.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
+            </div>
+          </article>
+
+          <!-- 05 -->
+          <article class="project-card" style="border-left-color: #555555;">
+            <h3>Apple Reseller Channel Intelligence Platform</h3>
+            <p class="card-context">EUR 17.6B channel revenue, 13 EMEA partners, 40+ SKUs</p>
+            <p>Ensemble forecasting model (SARIMA + Prophet + Random Forest) at 91.3% accuracy. Order chase engine
+              identified EUR 26.1M in incremental revenue. Partner scorecards auto-generate root cause narratives for
+              review calls.</p>
+            <p class="tech-stack">Python, Streamlit, Plotly, SARIMA, Prophet, Random Forest</p>
+            <div class="card-links">
+              <a href="https://apple-reseller-demand-intelligence-ebtudbrdjmcjtkjgnnfkbw.streamlit.app/" target="_blank"
+                rel="noopener noreferrer">Live Demo</a>
+              <a href="https://github.com/Kaif198/apple-reseller-demand-intelligence" target="_blank"
+                rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <!-- 06 -->
+          <article class="project-card" style="border-left-color: #DB0032;">
+            <h3>Red Bull Supply Chain Cost Analyzer &amp; Optimizer</h3>
+            <p class="card-context">Austrian beverage distribution with Alpine terrain logistics</p>
+            <p>Full-stack logistics optimization with nearest-neighbor routing, Haversine distance calculations with
+              Alpine road factor adjustments, and 4 optimization modes (Fastest, Cheapest, Greenest, Balanced). Includes
+              fleet management and chain of custody module.</p>
+            <p class="tech-stack">React, TypeScript, TailwindCSS, Node.js, Express, PostgreSQL, Prisma</p>
+            <div class="card-links">
+              <a href="https://supply-chain-cost-analyzer-and-opti.vercel.app/" target="_blank"
+                rel="noopener noreferrer">Live Demo</a>
+              <a href="https://github.com/Kaif198/Supply-Chain-Cost-Analyzer-and-Optimizer-" target="_blank"
+                rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <!-- 07 -->
+          <article class="project-card" style="border-left-color: #00508F;">
+            <h3>ALDI SUD Procurement Performance Dashboard</h3>
+            <p class="card-context">EUR 8.7B annual procurement, 1,847 active suppliers</p>
+            <p>Procurement maturity assessment benchmarking cost savings (3.3% vs 2.5% industry average), contract
+              coverage, supplier quality, and delivery performance. Delivers a EUR 105M savings roadmap through
+              strategic sourcing and supplier consolidation.</p>
+            <p class="tech-stack">HTML, Chart.js, SQL, Microsoft Excel</p>
+            <div class="card-links">
+              <a href="https://kaif198.github.io/Aldi-procurement-dashboard/" target="_blank"
+                rel="noopener noreferrer">Live Demo</a>
+            </div>
+          </article>
+
+          <!-- 08 -->
+          <article class="project-card" style="border-left-color: #DB0032;">
+            <h3>Red Bull Performance Analytics Dashboard</h3>
+            <p class="card-context">EUR 14.93M sales data across 27,515 transactions</p>
+            <p>6-page interactive dashboard covering Executive Overview, Sales Analytics, Market Intelligence,
+              Distribution Excellence, Consumer Insights, and Marketing ROI. Red Bull branded design language
+              throughout.</p>
+            <p class="tech-stack">HTML5, CSS3, JavaScript, Chart.js</p>
+            <div class="card-links">
+              <a href="https://kaif198.github.io/Redbull-analytics-dashboard/" target="_blank"
+                rel="noopener noreferrer">Live Demo</a>
+            </div>
+          </article>
+
+          <!-- 09 -->
+          <article class="project-card" style="border-left-color: #1CABE2;">
+            <h3>UNICEF Displacement Data Pipeline &amp; Visualization</h3>
+            <p class="card-context">Global child displacement data — ETL pipeline to interactive dashboard</p>
+            <p>Full data pipeline from raw UNICEF datasets through ETL cleaning to interactive visualization. Choropleth
+              maps, scatter plots (GDP vs displacement), and time-series trends revealing humanitarian patterns.</p>
+            <p class="tech-stack">Quarto, Python, Plotly, HTML/CSS, GitHub Pages</p>
+            <div class="card-links">
+              <a href="https://kaif198.github.io/UNICEF-Data-Visualization/visualization.html" target="_blank"
+                rel="noopener noreferrer">Live Demo</a>
+            </div>
+          </article>
+
+          <!-- 10 -->
+          <article class="project-card" style="border-left-color: #073590;">
+            <h3>Ryanair Fuel Risk Analytics</h3>
+            <p class="card-context">Aviation fuel cost modelling and hedging strategy support</p>
+            <p>ETL pipeline loading raw fuel price and stock data into SQLite. ARIMA and Random Forest models generate
+              combined forecasts (2021-2025) and identify the 15 worst high-fuel-risk months for hedging decisions.</p>
+            <p class="tech-stack">Python, pandas, numpy, SQL/SQLite, scikit-learn, Jupyter</p>
+            <div class="card-links">
+              <a href="https://github.com/Kaif198/ryanair-fuel-risk" target="_blank"
+                rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <!-- 11 -->
+          <article class="project-card" style="border-left-color: #1CABE2;">
+            <h3>UNICEF Tableau Child Displacement Dashboard</h3>
+            <p class="card-context">Enterprise BI version of displacement data for analyst workflows</p>
+            <p>Tableau dashboard with global trend lines, interactive choropleth maps with year sliders (2009-2023),
+              country-level IDP drill-downs, and GDP per capita vs displacement scatter plots.</p>
+            <p class="tech-stack">Tableau, Data Visualization</p>
+            <div class="card-links">
+              <a href="https://public.tableau.com/app/profile/mohammed.kaif.ahmed/viz/KaifAhmedsIDPDashboard/Dashboard2"
+                target="_blank" rel="noopener noreferrer">Tableau Public</a>
+            </div>
+          </article>
+
+          <!-- 12 -->
+          <article class="project-card" style="border-left-color: #DB0032;">
+            <h3>Red Bull Global POS Supply Chain Planning System (Excel)</h3>
+            <p class="card-context">EUR 2.9M POS spend, 20 markets, 10 suppliers, 10 POS categories</p>
+            <p>Enterprise-grade Excel workbook with 8 interconnected sheets: Master Data (170 orders), Supplier
+              Directory with weighted tiering, Market Intelligence for 20 markets, Lookup &amp; Analysis Engine, 7 Pivot
+              Table views, Executive Dashboard, Risk Register, and Scenario Planner.</p>
+            <p class="tech-stack">Advanced Excel (VLOOKUP, INDEX-MATCH, XLOOKUP, SUMIFS, NPV/IRR, Pivot Tables,
+              conditional formatting)</p>
+            <div class="card-links">
+              <a href="https://github.com/Kaif198/Pos-RedBull-Excel" target="_blank"
+                rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <!-- 13 -->
+          <article class="project-card" style="border-left-color: #00508F;">
+            <h3>ALDI SUD Procurement Performance Excel Workbook</h3>
+            <p class="card-context">EUR 17.8M total spend, 25+ suppliers, 18 savings initiatives</p>
+            <p>7-tab analytical workbook with Executive Dashboard, Spend Analysis (YoY), Supplier Scorecard (weighted:
+              quality 30%, delivery 25%, cost 25%, innovation 20%), Cost Savings Tracker (7.8% savings rate), Business
+              Case Calculator (NPV/IRR/ROI with sensitivity analysis), and Budget vs Actual with quarterly variance
+              commentary.</p>
+            <p class="tech-stack">Advanced Excel (SUMIFS, INDEX/MATCH, NPV/IRR, Weighted Averages, Pivot Tables)</p>
+            <div class="card-links">
+              <a href="https://github.com/Kaif198/ALDI-Procurement-Performance-Financial-Control-Dashboard_Excel-Analytics-Portfolio"
+                target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <!-- 14 -->
+          <article class="project-card" style="border-left-color: #00508F;">
+            <h3>ALDI SUD SAP Ariba P2P Process Intelligence</h3>
+            <p class="card-context">Purchase-to-pay cycle health monitoring and improvement tracking</p>
+            <p>Gives procurement leadership a 30-second health check on the full P2P cycle. Surfaces invoice exceptions
+              before they escalate, tracks supplier performance trends over 6 months, and manages EUR 4M+ in continuous
+              improvement initiatives.</p>
+            <p class="tech-stack">React, Tailwind CSS, Vercel</p>
+            <div class="card-links">
+              <a href="https://p2-p-sa-pariba-simulation.vercel.app/overview" target="_blank"
+                rel="noopener noreferrer">Live Demo</a>
+            </div>
+          </article>
+
+          <!-- 15 -->
+          <article class="project-card" style="border-left-color: #6366f1;">
+            <h3>ChainQuery — Supply Chain SQL Analytics Platform</h3>
+            <p class="card-context">In-browser SQLite, 5 ML models, AI assistant, executive dashboards</p>
+            <p>Full-stack supply chain analytics platform running entirely in the browser via WebAssembly. Features a 20+ query library across demand planning, inventory, supplier performance, and production analytics. Includes 5 statistical forecasting models (SMA, WMA, Holt-Winters, Linear Regression, Seasonal Decomposition) with interactive parameter tuning, an AI assistant (Claude API) for natural language → SQL, business narrative intelligence with a 50+ term glossary, and an executive dashboard builder with KPI widgets, chart widgets, and PDF export.</p>
+            <p class="tech-stack">React 18, Vite 6, sql.js (SQLite/WASM), Recharts, Claude API, jsPDF, Tailwind CSS</p>
+            <div class="card-links">
+              <a href="https://chain-query-mauve.vercel.app/" target="_blank"
+                rel="noopener noreferrer">Live Demo</a>
+              <a href="https://github.com/Kaif198/Chain-Query" target="_blank"
+                rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <!-- 16 -->
+          <article class="project-card" style="border-left-color: #555555;">
+            <h3>Apple Reseller Channel Operations Dashboard (Excel)</h3>
+            <p class="card-context">EUR 233M channel revenue, 8 EMEIA partners, FY26 planning cycle</p>
+            <p>Excel-based BI workbook for managing Apple product distribution across 8 EMEIA reseller partners. 7 interconnected sheets covering Reseller Performance Scorecard (11 KPIs, composite scoring, automated ranking), Demand Forecast vs Actuals (5 product categories, MAPE, cumulative variance), NPI Launch Tracker (6 upcoming products, readiness status, ship-to-target %), Seasonal Inventory Optimization (Q4 replenishment engine, WoS gap analysis, reorder recommendations), Executive Summary (channel health heatmap), and an Interactive Analysis Tool with partner profiling and inventory what-if sandbox.</p>
+            <p class="tech-stack">Advanced Excel (VLOOKUP, SUMIFS, AVERAGEIFS, RANK, Conditional Formatting, What-If Analysis)</p>
+            <div class="card-links">
+              <a href="https://github.com/Kaif198/Apple-Reseller-Excel-Workbook" target="_blank"
+                rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+
         </div>
-        <span class="date">Jan 2023 — Oct 2024</span>
       </div>
-      <div class="role-body">
-        <p>Built multi-variable demand forecasting models (92% accuracy) across channels, categories, and SKUs, improving buy-plan efficiency by 15% and optimising INR 2.4M in planning decisions. Methodology transferable to volume assumption and allocation planning.</p>
-        <p>Rationalised supplier base from 45 to 32 vendors using Kraljic Matrix and Porter's Five Forces, negotiating terms that reduced acquisition costs by 12%. Built inventory dashboards reducing excess stock by 35% (INR 180K capital release).</p>
-        <p>Maintained planning master data accuracy across 12 locations and coordinated data handovers between buying, warehousing, and distribution teams to ensure synchronised replenishment.</p>
+    </section>
+
+    <!-- ── EDUCATION ──────────────────────────────────────────────── -->
+    <section id="education">
+      <div class="container">
+        <h2>Education</h2>
+
+        <article>
+          <h3>PG Diploma in Strategy Management</h3>
+          <p class="edu-meta">Dublin City University — Triple Crown Accredited (AACSB, EQUIS, AMBA) &nbsp;·&nbsp; Jan
+            2025 — Mar 2026</p>
+          <p class="edu-focus">Supply Chain Strategy, Operations Management, Business Analytics, Digital Transformation
+          </p>
+        </article>
+
+        <article>
+          <h3>Bachelor of Commerce in Accounting &amp; Finance</h3>
+          <p class="edu-meta">Osmania University, Hyderabad &nbsp;·&nbsp; Jun 2020 — Aug 2023</p>
+          <p class="edu-focus">Financial Accounting, Cost Accounting, Business Economics, Quantitative Methods</p>
+        </article>
+
+        <h3 class="cert-heading">Certifications</h3>
+        <div class="tags">
+          <span class="tag">SAP Business Analyst (SAP)</span>
+          <span class="tag">Oracle Cloud &amp; AI Foundations (Oracle)</span>
+          <span class="tag">AI-Powered Finance &amp; Accounting (Coursera)</span>
+          <span class="tag">M&amp;A Valuation (Univ. of Illinois)</span>
+          <span class="tag">CSCMP SCPro Procurement</span>
+          <span class="tag">GenAI for Supply Chain (CSCMP)</span>
+          <span class="tag">SQL &amp; Relational Databases (IBM)</span>
+          <span class="tag">PostgreSQL Bootcamp (Udemy)</span>
+          <span class="tag">Project Management Foundations (Google)</span>
+        </div>
       </div>
-      <p class="impact">INR 245K+ working capital improvement &nbsp;|&nbsp; 29% vendor rationalisation &nbsp;|&nbsp; 12-location planning analytics</p>
-    </article>
+    </section>
 
-    <article>
-      <div class="role-header">
-        <div class="role-header-left">
-          <h3>Customer Operations Associate — Cross-Border Logistics</h3>
-          <span class="company">Amazon | Remote (EU/USA/GCC)</span>
-        </div>
-        <span class="date">Sep 2021 — Nov 2022</span>
-      </div>
-      <div class="role-body">
-        <p>Analysed cross-border fulfilment workflows across EU, USA, and GCC markets, identifying process exceptions and data quality gaps that drove a 15% improvement in delivery performance. Built vendor compliance KPI framework enabling data-driven supplier evaluation at global scale.</p>
-        <p>Prepared structured process improvement recommendations for internal stakeholders, reducing exception handling time and supporting planning synchronisation across multi-market supply chain operations.</p>
-      </div>
-    </article>
+  </main>
 
-  </div>
-</section>
-
-<!-- ── PROJECTS ───────────────────────────────────────────────── -->
-<section id="projects">
-  <div class="container">
-    <h2>Projects</h2>
-    <p class="section-subtitle">14 live projects. Each one deployed, clickable, and built to demonstrate how I think about problems.</p>
-    <div class="projects-grid">
-
-      <!-- 01 -->
-      <article class="project-card" style="border-left-color: #FF9900;">
-        <h3>Amazon EU Operations Portal</h3>
-        <p class="card-context">Last-mile delivery intelligence across 15 stations, 7 EU countries</p>
-        <p>Central operations dashboard with LSTM neural network volume forecasting (TensorFlow.js), capacity planning simulator, and station risk matrix. Replaces manual spreadsheet tracking with real-time AI-generated executive insights.</p>
-        <p class="tech-stack">React 19, Vite, Recharts, Framer Motion, TensorFlow.js</p>
-        <div class="card-links">
-          <a href="https://amazon-eu-operations-portal-git-main-kaif-ahmeds-projects.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
-          <a href="https://github.com/Kaif198/Amazon-EU-Operations-Portal" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </div>
-      </article>
-
-      <!-- 02 -->
-      <article class="project-card" style="border-left-color: #DB0032;">
-        <h3>Red Bull Quality Performance Intelligence</h3>
-        <p class="card-context">FMCG quality monitoring across 6 facilities and 8 suppliers</p>
-        <p>Early warning system using Holt-Winters forecasting, CUSUM process control, and anomaly detection. Every model outputs plain-English narratives explaining the risk, the evidence, and the recommended action.</p>
-        <p class="tech-stack">React, Plotly.js, JavaScript (client-side ML)</p>
-        <div class="card-links">
-          <a href="https://cozy-zabaione-17bc6d.netlify.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
-        </div>
-      </article>
-
-      <!-- 03 -->
-      <article class="project-card" style="border-left-color: #00508F;">
-        <h3>ALDI SUD Supply Chain Intelligence Pipeline</h3>
-        <p class="card-context">Automated supplier data validation and enrichment</p>
-        <p>n8n workflow orchestration pipeline with 10 connected nodes and a 6-rule validation engine. Catches invalid delivery dates, impossible weights, and mismatched SKUs before they corrupt downstream planning.</p>
-        <p class="tech-stack">n8n (Railway), Neon PostgreSQL, React + Vite, Recharts, Tailwind CSS</p>
-        <div class="card-links">
-          <a href="https://n8n-workflow-aldi.vercel.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
-        </div>
-      </article>
-
-      <!-- 04 -->
-      <article class="project-card" style="border-left-color: #00508F;">
-        <h3>ALDI SUD Financial Services Procurement Platform</h3>
-        <p class="card-context">EUR 47.3M vendor spend across 7 procurement categories</p>
-        <p>End-to-end procurement intelligence covering vendor onboarding through spend forecasting and risk monitoring. Uses ARIMA time-series forecasting and Random Forest vendor risk modelling (89.3% accuracy). Flags vendors with expired ISO certifications.</p>
-        <p class="tech-stack">React.js, Tailwind CSS, Recharts, Python ML models, Vercel</p>
-        <div class="card-links">
-          <a href="https://finserv-procure-intel.vercel.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
-        </div>
-      </article>
-
-      <!-- 05 -->
-      <article class="project-card" style="border-left-color: #555555;">
-        <h3>Apple Reseller Channel Intelligence Platform</h3>
-        <p class="card-context">EUR 17.6B channel revenue, 13 EMEA partners, 40+ SKUs</p>
-        <p>Ensemble forecasting model (SARIMA + Prophet + Random Forest) at 91.3% accuracy. Order chase engine identified EUR 26.1M in incremental revenue. Partner scorecards auto-generate root cause narratives for review calls.</p>
-        <p class="tech-stack">Python, Streamlit, Plotly, SARIMA, Prophet, Random Forest</p>
-        <div class="card-links">
-          <a href="https://web-production-47d7a.up.railway.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
-          <a href="https://github.com/Kaif198/apple-reseller-demand-intelligence" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </div>
-      </article>
-
-      <!-- 06 -->
-      <article class="project-card" style="border-left-color: #DB0032;">
-        <h3>Red Bull Supply Chain Cost Analyzer &amp; Optimizer</h3>
-        <p class="card-context">Austrian beverage distribution with Alpine terrain logistics</p>
-        <p>Full-stack logistics optimization with nearest-neighbor routing, Haversine distance calculations with Alpine road factor adjustments, and 4 optimization modes (Fastest, Cheapest, Greenest, Balanced). Includes fleet management and chain of custody module.</p>
-        <p class="tech-stack">React, TypeScript, TailwindCSS, Node.js, Express, PostgreSQL, Prisma</p>
-        <div class="card-links">
-          <a href="https://supply-chain-cost-analyzer-and-opti.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
-          <a href="https://github.com/Kaif198/Supply-Chain-Cost-Analyzer-and-Optimizer-" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </div>
-      </article>
-
-      <!-- 07 -->
-      <article class="project-card" style="border-left-color: #00508F;">
-        <h3>ALDI SUD Procurement Performance Dashboard</h3>
-        <p class="card-context">EUR 8.7B annual procurement, 1,847 active suppliers</p>
-        <p>Procurement maturity assessment benchmarking cost savings (3.3% vs 2.5% industry average), contract coverage, supplier quality, and delivery performance. Delivers a EUR 105M savings roadmap through strategic sourcing and supplier consolidation.</p>
-        <p class="tech-stack">HTML, Chart.js, SQL, Microsoft Excel</p>
-        <div class="card-links">
-          <a href="https://kaif198.github.io/Aldi-procurement-dashboard/" target="_blank" rel="noopener noreferrer">Live Demo</a>
-        </div>
-      </article>
-
-      <!-- 08 -->
-      <article class="project-card" style="border-left-color: #DB0032;">
-        <h3>Red Bull Performance Analytics Dashboard</h3>
-        <p class="card-context">EUR 14.93M sales data across 27,515 transactions</p>
-        <p>6-page interactive dashboard covering Executive Overview, Sales Analytics, Market Intelligence, Distribution Excellence, Consumer Insights, and Marketing ROI. Red Bull branded design language throughout.</p>
-        <p class="tech-stack">HTML5, CSS3, JavaScript, Chart.js</p>
-        <div class="card-links">
-          <a href="https://kaif198.github.io/Redbull-analytics-dashboard/" target="_blank" rel="noopener noreferrer">Live Demo</a>
-        </div>
-      </article>
-
-      <!-- 09 -->
-      <article class="project-card" style="border-left-color: #1CABE2;">
-        <h3>UNICEF Displacement Data Pipeline &amp; Visualization</h3>
-        <p class="card-context">Global child displacement data — ETL pipeline to interactive dashboard</p>
-        <p>Full data pipeline from raw UNICEF datasets through ETL cleaning to interactive visualization. Choropleth maps, scatter plots (GDP vs displacement), and time-series trends revealing humanitarian patterns.</p>
-        <p class="tech-stack">Quarto, Python, Plotly, HTML/CSS, GitHub Pages</p>
-        <div class="card-links">
-          <a href="https://kaif198.github.io/UNICEF-Data-Visualization/visualization.html" target="_blank" rel="noopener noreferrer">Live Demo</a>
-        </div>
-      </article>
-
-      <!-- 10 -->
-      <article class="project-card" style="border-left-color: #073590;">
-        <h3>Ryanair Fuel Risk Analytics</h3>
-        <p class="card-context">Aviation fuel cost modelling and hedging strategy support</p>
-        <p>ETL pipeline loading raw fuel price and stock data into SQLite. ARIMA and Random Forest models generate combined forecasts (2021-2025) and identify the 15 worst high-fuel-risk months for hedging decisions.</p>
-        <p class="tech-stack">Python, pandas, numpy, SQL/SQLite, scikit-learn, Jupyter</p>
-        <div class="card-links">
-          <a href="https://github.com/Kaif198/ryanair-fuel-risk" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </div>
-      </article>
-
-      <!-- 11 -->
-      <article class="project-card" style="border-left-color: #1CABE2;">
-        <h3>UNICEF Tableau Child Displacement Dashboard</h3>
-        <p class="card-context">Enterprise BI version of displacement data for analyst workflows</p>
-        <p>Tableau dashboard with global trend lines, interactive choropleth maps with year sliders (2009-2023), country-level IDP drill-downs, and GDP per capita vs displacement scatter plots.</p>
-        <p class="tech-stack">Tableau, Data Visualization</p>
-        <div class="card-links">
-          <a href="https://public.tableau.com/app/profile/mohammed.kaif.ahmed/viz/KaifAhmedsIDPDashboard/Dashboard2" target="_blank" rel="noopener noreferrer">Tableau Public</a>
-        </div>
-      </article>
-
-      <!-- 12 -->
-      <article class="project-card" style="border-left-color: #DB0032;">
-        <h3>Red Bull Global POS Supply Chain Planning System (Excel)</h3>
-        <p class="card-context">EUR 2.9M POS spend, 20 markets, 10 suppliers, 10 POS categories</p>
-        <p>Enterprise-grade Excel workbook with 8 interconnected sheets: Master Data (170 orders), Supplier Directory with weighted tiering, Market Intelligence for 20 markets, Lookup &amp; Analysis Engine, 7 Pivot Table views, Executive Dashboard, Risk Register, and Scenario Planner.</p>
-        <p class="tech-stack">Advanced Excel (VLOOKUP, INDEX-MATCH, XLOOKUP, SUMIFS, NPV/IRR, Pivot Tables, conditional formatting)</p>
-        <div class="card-links">
-          <a href="https://github.com/Kaif198/Pos-RedBull-Excel" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </div>
-      </article>
-
-      <!-- 13 -->
-      <article class="project-card" style="border-left-color: #00508F;">
-        <h3>ALDI SUD Procurement Performance Excel Workbook</h3>
-        <p class="card-context">EUR 17.8M total spend, 25+ suppliers, 18 savings initiatives</p>
-        <p>7-tab analytical workbook with Executive Dashboard, Spend Analysis (YoY), Supplier Scorecard (weighted: quality 30%, delivery 25%, cost 25%, innovation 20%), Cost Savings Tracker (7.8% savings rate), Business Case Calculator (NPV/IRR/ROI with sensitivity analysis), and Budget vs Actual with quarterly variance commentary.</p>
-        <p class="tech-stack">Advanced Excel (SUMIFS, INDEX/MATCH, NPV/IRR, Weighted Averages, Pivot Tables)</p>
-        <div class="card-links">
-          <a href="https://github.com/Kaif198/ALDI-Procurement-Performance-Financial-Control-Dashboard_Excel-Analytics-Portfolio" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </div>
-      </article>
-
-      <!-- 14 -->
-      <article class="project-card" style="border-left-color: #00508F;">
-        <h3>ALDI SUD SAP Ariba P2P Process Intelligence</h3>
-        <p class="card-context">Purchase-to-pay cycle health monitoring and improvement tracking</p>
-        <p>Gives procurement leadership a 30-second health check on the full P2P cycle. Surfaces invoice exceptions before they escalate, tracks supplier performance trends over 6 months, and manages EUR 4M+ in continuous improvement initiatives.</p>
-        <p class="tech-stack">React, Tailwind CSS, Vercel</p>
-        <div class="card-links">
-          <a href="https://p2-p-sa-pariba-simulation.vercel.app/overview" target="_blank" rel="noopener noreferrer">Live Demo</a>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ── EDUCATION ──────────────────────────────────────────────── -->
-<section id="education">
-  <div class="container">
-    <h2>Education</h2>
-
-    <article>
-      <h3>PG Diploma in Strategy Management</h3>
-      <p class="edu-meta">Dublin City University — Triple Crown Accredited (AACSB, EQUIS, AMBA) &nbsp;·&nbsp; Jan 2025 — Mar 2026</p>
-      <p class="edu-focus">Supply Chain Strategy, Operations Management, Business Analytics, Digital Transformation</p>
-    </article>
-
-    <article>
-      <h3>Bachelor of Commerce in Accounting &amp; Finance</h3>
-      <p class="edu-meta">Osmania University, Hyderabad &nbsp;·&nbsp; Jun 2020 — Aug 2023</p>
-      <p class="edu-focus">Financial Accounting, Cost Accounting, Business Economics, Quantitative Methods</p>
-    </article>
-
-    <h3 class="cert-heading">Certifications</h3>
-    <div class="tags">
-      <span class="tag">SAP Business Analyst (SAP)</span>
-      <span class="tag">Oracle Cloud &amp; AI Foundations (Oracle)</span>
-      <span class="tag">AI-Powered Finance &amp; Accounting (Coursera)</span>
-      <span class="tag">M&amp;A Valuation (Univ. of Illinois)</span>
-      <span class="tag">CSCMP SCPro Procurement</span>
-      <span class="tag">GenAI for Supply Chain (CSCMP)</span>
-      <span class="tag">SQL &amp; Relational Databases (IBM)</span>
-      <span class="tag">PostgreSQL Bootcamp (Udemy)</span>
-      <span class="tag">Project Management Foundations (Google)</span>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- ============================================================
+  <!-- ============================================================
      CONTACT / FOOTER
      ============================================================ -->
-<footer id="contact">
-  <div class="container">
-    <h2>Let's Connect</h2>
-    <p>I am looking for roles in procurement, supply chain analytics, and data intelligence where I can bring this combination of strategic thinking, domain knowledge, and hands-on building capability to a team that values all three.</p>
-    <address>
-      <a href="mailto:kaifahmed6864@gmail.com">kaifahmed6864@gmail.com</a>
-      <a href="tel:+353894120412">+353 894120412</a>
-      <a href="https://linkedin.com/in/kaif-ahmed-bb972421a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://github.com/Kaif198" target="_blank" rel="noopener noreferrer">GitHub</a>
-    </address>
-    <dl>
-      <dt>Location</dt>
-      <dd>Dublin, Ireland | Work Authorized in Ireland (Stamp 1G) | Open to International Relocation</dd>
-      <dt>Languages</dt>
-      <dd>English (C2) | Hindi (C2) | German (A1, committed to B1 by Q3 2026) | French (A1)</dd>
-      <dt>Availability</dt>
-      <dd>Immediate</dd>
-    </dl>
-    <p class="footer-line">Mohammed Kaif Ahmed — 2026</p>
-  </div>
-</footer>
+  <footer id="contact">
+    <div class="container">
+      <h2>Let's Connect</h2>
+      <p>I am looking for roles in procurement, supply chain analytics, and data intelligence where I can bring this
+        combination of strategic thinking, domain knowledge, and hands-on building capability to a team that values all
+        three.</p>
+      <address>
+        <a href="mailto:kaifahmed6864@gmail.com">kaifahmed6864@gmail.com</a>
+        <a href="tel:+353894120412">+353 894120412</a>
+        <a href="https://linkedin.com/in/kaif-ahmed-bb972421a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/Kaif198" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </address>
+      <dl>
+        <dt>Location</dt>
+        <dd>Dublin, Ireland | Work Authorized in Ireland (Stamp 1G) | Open to International Relocation</dd>
+        <dt>Languages</dt>
+        <dd>English (C2) | Hindi (C2) | German (A1, committed to B1 by Q3 2026) | French (A1)</dd>
+        <dt>Availability</dt>
+        <dd>Immediate</dd>
+      </dl>
+      <p class="footer-line">Mohammed Kaif Ahmed — 2026</p>
+    </div>
+  </footer>
 
-<!-- ============================================================
+  <!-- ============================================================
      SCRIPT
      ============================================================ -->
-<script>
-(function () {
-  'use strict';
+  <script>
+    (function () {
+      'use strict';
 
-  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ── Arrow spans in card links ───────────────────────────────── */
-  document.querySelectorAll('.card-links a').forEach(function (a) {
-    var arrow = document.createElement('span');
-    arrow.className = 'arrow';
-    arrow.setAttribute('aria-hidden', 'true');
-    arrow.textContent = '→';
-    a.appendChild(arrow);
-  });
-
-  /* ── Hamburger ───────────────────────────────────────────────── */
-  var nav       = document.querySelector('.nav');
-  var hamburger = document.querySelector('.hamburger');
-  if (hamburger && nav) {
-    hamburger.addEventListener('click', function () {
-      var open = nav.classList.toggle('nav-open');
-      hamburger.setAttribute('aria-expanded', open.toString());
-    });
-    document.querySelectorAll('.nav-links a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        nav.classList.remove('nav-open');
-        hamburger.setAttribute('aria-expanded', 'false');
+      /* ── Arrow spans in card links ───────────────────────────────── */
+      document.querySelectorAll('.card-links a').forEach(function (a) {
+        var arrow = document.createElement('span');
+        arrow.className = 'arrow';
+        arrow.setAttribute('aria-hidden', 'true');
+        arrow.textContent = '→';
+        a.appendChild(arrow);
       });
-    });
-  }
 
-  /* ── Scroll progress bar ─────────────────────────────────────── */
-  var progBar   = document.getElementById('scroll-progress');
-  var brandName = document.querySelector('.nav-brand-name');
-
-  function onScroll() {
-    var sy  = window.scrollY || window.pageYOffset;
-    var sh  = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    if (progBar) progBar.style.width = (sh > 0 ? sy / sh * 100 : 0) + '%';
-
-    /* Nav background opacity */
-    var bg = Math.min(0.95, 0.5 + (sy / 200) * 0.45);
-    if (nav) nav.style.background = 'rgba(0,0,0,' + bg + ')';
-
-    /* Brand name shrinks as user scrolls past hero */
-    if (brandName) {
-      var fs = sy > 120 ? 16 : 20 - (sy / 120) * 4;
-      brandName.style.fontSize = fs.toFixed(1) + 'px';
-      brandName.style.transition = 'font-size 0.4s cubic-bezier(0.25,0.1,0.25,1)';
-    }
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-
-  /* ── Page load sequence ──────────────────────────────────────── */
-  (function pageLoad() {
-    if (reduced) return;
-
-    /* Hide nav immediately in JS so it fades in cinematically */
-    if (nav) { nav.style.opacity = '0'; nav.style.transition = 'opacity 0.6s ease'; }
-
-    /* Wrap h1 words in spans */
-    var h1 = document.querySelector('#hero h1');
-    if (h1) {
-      var words = h1.textContent.trim().split(' ');
-      h1.innerHTML = words.map(function (w) {
-        return '<span class="hero-word">' + w + '</span>';
-      }).join(' ');
-    }
-
-    var heroSub  = document.querySelector('.hero-sub');
-    var heroCtct = document.querySelector('.hero-contact');
-    if (heroSub)  { heroSub.style.opacity  = '0'; heroSub.style.transition  = 'opacity 0.8s cubic-bezier(0.0,0.0,0.2,1)'; }
-    if (heroCtct) { heroCtct.style.opacity = '0'; heroCtct.style.transition = 'opacity 0.5s cubic-bezier(0.0,0.0,0.2,1)'; }
-
-    /* Step 2 — nav */
-    setTimeout(function () { if (nav) nav.style.opacity = '1'; }, 300);
-
-    /* Step 3 — headline words */
-    document.querySelectorAll('.hero-word').forEach(function (w, i) {
-      setTimeout(function () { w.classList.add('w-in'); }, 600 + i * 150);
-    });
-
-    /* Step 4 — subheadline */
-    setTimeout(function () { if (heroSub)  heroSub.style.opacity  = '1'; }, 1200);
-
-    /* Step 5 — contact row */
-    setTimeout(function () { if (heroCtct) heroCtct.style.opacity = '1'; }, 1600);
-  }());
-
-  /* ── Section scroll animations ───────────────────────────────── */
-  (function initScroll() {
-    var hasIO = 'IntersectionObserver' in window;
-
-    function once(el, fn, thresh) {
-      if (!hasIO) { fn(el); return; }
-      var obs = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (!e.isIntersecting) return;
-          fn(e.target); obs.unobserve(e.target);
+      /* ── Hamburger ───────────────────────────────────────────────── */
+      var nav = document.querySelector('.nav');
+      var hamburger = document.querySelector('.hamburger');
+      if (hamburger && nav) {
+        hamburger.addEventListener('click', function () {
+          var open = nav.classList.toggle('nav-open');
+          hamburger.setAttribute('aria-expanded', open.toString());
         });
-      }, { threshold: thresh || 0.08 });
-      obs.observe(el);
-    }
-    function delay(fn, ms) { setTimeout(fn, ms); }
-
-    /* ABOUT */
-    var aboutSec = document.getElementById('about');
-    if (aboutSec) {
-      var photo   = aboutSec.querySelector('.about-photo');
-      var content = aboutSec.querySelector('.about-content');
-      var ps      = content ? content.querySelectorAll('p') : [];
-      var tags    = aboutSec.querySelectorAll('.tag');
-      if (photo) photo.classList.add('anim-left');
-      ps.forEach(function (p) { p.classList.add('anim-right'); });
-      once(aboutSec, function () {
-        if (photo) delay(function () { photo.classList.add('anim-in'); }, 0);
-        ps.forEach(function (p, i) {
-          delay(function () { p.classList.add('anim-in'); }, 150 + i * 120);
+        document.querySelectorAll('.nav-links a').forEach(function (a) {
+          a.addEventListener('click', function () {
+            nav.classList.remove('nav-open');
+            hamburger.setAttribute('aria-expanded', 'false');
+          });
         });
-        tags.forEach(function (t, i) {
-          t.classList.add('anim-tag');
-          delay(function () { t.classList.add('anim-in'); }, 500 + i * 50);
-        });
-      });
-    }
-
-    /* EXPERIENCE */
-    var expSec = document.getElementById('experience');
-    if (expSec) {
-      var roles   = expSec.querySelectorAll('article');
-      var impacts = expSec.querySelectorAll('.impact');
-      roles.forEach(function (r) { r.classList.add('anim-up'); });
-      impacts.forEach(function (imp) {
-        imp.style.opacity   = '0';
-        imp.style.transform = 'translateX(-8px)';
-        imp.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-      });
-      once(expSec, function () {
-        roles.forEach(function (r, i) {
-          delay(function () { r.classList.add('anim-in'); }, i * 150);
-        });
-        impacts.forEach(function (imp, i) {
-          delay(function () {
-            imp.style.opacity   = '1';
-            imp.style.transform = 'translateX(0)';
-          }, 550 + i * 150);
-        });
-      }, 0.05);
-    }
-
-    /* PROJECTS */
-    var projSec = document.getElementById('projects');
-    if (projSec) {
-      var subtitle  = projSec.querySelector('.section-subtitle');
-      var savedText = subtitle ? subtitle.textContent : '';
-      var pcards    = projSec.querySelectorAll('.project-card');
-      pcards.forEach(function (c) { c.classList.add('anim-up'); });
-
-      /* Typewriter setup */
-      var cursor = null;
-      if (subtitle) {
-        subtitle.textContent = '';
-        cursor = document.createElement('span');
-        cursor.className = 'tw-cursor';
-        subtitle.appendChild(cursor);
       }
 
-      once(projSec, function () {
-        /* Typewriter */
-        if (subtitle && savedText && cursor) {
-          var chars = savedText.split(''), ci = 0;
-          var iv = setInterval(function () {
-            if (ci < chars.length) {
-              subtitle.insertBefore(document.createTextNode(chars[ci++]), cursor);
-            } else {
-              clearInterval(iv);
-              var blinks = 0;
-              var biv = setInterval(function () {
-                cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
-                if (++blinks >= 6) { clearInterval(biv); cursor.remove(); }
-              }, 400);
-            }
-          }, 40);
+      /* ── Scroll progress bar ─────────────────────────────────────── */
+      var progBar = document.getElementById('scroll-progress');
+      var brandName = document.querySelector('.nav-brand-name');
+
+      function onScroll() {
+        var sy = window.scrollY || window.pageYOffset;
+        var sh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        if (progBar) progBar.style.width = (sh > 0 ? sy / sh * 100 : 0) + '%';
+
+        /* Nav background opacity */
+        var bg = Math.min(0.95, 0.5 + (sy / 200) * 0.45);
+        if (nav) nav.style.background = 'rgba(0,0,0,' + bg + ')';
+
+        /* Brand name shrinks as user scrolls past hero */
+        if (brandName) {
+          var fs = sy > 120 ? 16 : 20 - (sy / 120) * 4;
+          brandName.style.fontSize = fs.toFixed(1) + 'px';
+          brandName.style.transition = 'font-size 0.4s cubic-bezier(0.25,0.1,0.25,1)';
         }
-        /* Grid-aware card stagger */
-        var desktop = window.innerWidth >= 768;
-        pcards.forEach(function (c, idx) {
-          var d = desktop
-            ? Math.floor(idx / 2) * 120 + (idx % 2) * 100
-            : idx * 70;
-          delay(function () { c.classList.add('anim-in'); }, 300 + d);
-        });
-      }, 0.04);
-    }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
 
-    /* EDUCATION */
-    var eduSec = document.getElementById('education');
-    if (eduSec) {
-      var earts = eduSec.querySelectorAll('article');
-      var ctags = eduSec.querySelectorAll('.tag');
-      earts.forEach(function (a) { a.classList.add('anim-up'); });
-      once(eduSec, function () {
-        earts.forEach(function (a, i) {
-          delay(function () { a.classList.add('anim-in'); }, i * 150);
-        });
-        ctags.forEach(function (t, i) {
-          t.classList.add('anim-tag');
-          delay(function () { t.classList.add('anim-in'); }, 400 + i * 50);
-        });
-      });
-    }
+      /* ── Page load sequence ──────────────────────────────────────── */
+      (function pageLoad() {
+        if (reduced) return;
 
-    /* FOOTER / CONTACT */
-    var footerEl = document.getElementById('contact');
-    if (footerEl) {
-      var fh2    = footerEl.querySelector('h2');
-      var flinks = footerEl.querySelectorAll('address a');
-      if (fh2) fh2.classList.add('anim-up');
-      flinks.forEach(function (a) { a.classList.add('anim-up'); });
-      once(footerEl, function () {
-        if (fh2) delay(function () { fh2.classList.add('anim-in'); }, 0);
-        flinks.forEach(function (a, i) {
-          delay(function () { a.classList.add('anim-in'); }, 200 + i * 100);
-        });
-      });
-    }
-  }());
+        /* Hide nav immediately in JS so it fades in cinematically */
+        if (nav) { nav.style.opacity = '0'; nav.style.transition = 'opacity 0.6s ease'; }
 
-}());
-</script>
+        /* Wrap h1 words in spans */
+        var h1 = document.querySelector('#hero h1');
+        if (h1) {
+          var words = h1.textContent.trim().split(' ');
+          h1.innerHTML = words.map(function (w) {
+            return '<span class="hero-word">' + w + '</span>';
+          }).join(' ');
+        }
+
+        var heroSub = document.querySelector('.hero-sub');
+        var heroCtct = document.querySelector('.hero-contact');
+        if (heroSub) { heroSub.style.opacity = '0'; heroSub.style.transition = 'opacity 0.8s cubic-bezier(0.0,0.0,0.2,1)'; }
+        if (heroCtct) { heroCtct.style.opacity = '0'; heroCtct.style.transition = 'opacity 0.5s cubic-bezier(0.0,0.0,0.2,1)'; }
+
+        /* Step 2 — nav */
+        setTimeout(function () { if (nav) nav.style.opacity = '1'; }, 300);
+
+        /* Step 3 — headline words */
+        document.querySelectorAll('.hero-word').forEach(function (w, i) {
+          setTimeout(function () { w.classList.add('w-in'); }, 600 + i * 150);
+        });
+
+        /* Step 4 — subheadline */
+        setTimeout(function () { if (heroSub) heroSub.style.opacity = '1'; }, 1200);
+
+        /* Step 5 — contact row */
+        setTimeout(function () { if (heroCtct) heroCtct.style.opacity = '1'; }, 1600);
+      }());
+
+      /* ── Section scroll animations ───────────────────────────────── */
+      (function initScroll() {
+        var hasIO = 'IntersectionObserver' in window;
+
+        function once(el, fn, thresh) {
+          if (!hasIO) { fn(el); return; }
+          var obs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+              if (!e.isIntersecting) return;
+              fn(e.target); obs.unobserve(e.target);
+            });
+          }, { threshold: thresh || 0.08 });
+          obs.observe(el);
+        }
+        function delay(fn, ms) { setTimeout(fn, ms); }
+
+        /* ABOUT */
+        var aboutSec = document.getElementById('about');
+        if (aboutSec) {
+          var photo = aboutSec.querySelector('.about-photo');
+          var content = aboutSec.querySelector('.about-content');
+          var ps = content ? content.querySelectorAll('p') : [];
+          var tags = aboutSec.querySelectorAll('.tag');
+          if (photo) photo.classList.add('anim-left');
+          ps.forEach(function (p) { p.classList.add('anim-right'); });
+          once(aboutSec, function () {
+            if (photo) delay(function () { photo.classList.add('anim-in'); }, 0);
+            ps.forEach(function (p, i) {
+              delay(function () { p.classList.add('anim-in'); }, 150 + i * 120);
+            });
+            tags.forEach(function (t, i) {
+              t.classList.add('anim-tag');
+              delay(function () { t.classList.add('anim-in'); }, 500 + i * 50);
+            });
+          });
+        }
+
+        /* EXPERIENCE */
+        var expSec = document.getElementById('experience');
+        if (expSec) {
+          var roles = expSec.querySelectorAll('article');
+          var impacts = expSec.querySelectorAll('.impact');
+          roles.forEach(function (r) { r.classList.add('anim-up'); });
+          impacts.forEach(function (imp) {
+            imp.style.opacity = '0';
+            imp.style.transform = 'translateX(-8px)';
+            imp.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+          });
+          once(expSec, function () {
+            roles.forEach(function (r, i) {
+              delay(function () { r.classList.add('anim-in'); }, i * 150);
+            });
+            impacts.forEach(function (imp, i) {
+              delay(function () {
+                imp.style.opacity = '1';
+                imp.style.transform = 'translateX(0)';
+              }, 550 + i * 150);
+            });
+          }, 0.05);
+        }
+
+        /* PROJECTS */
+        var projSec = document.getElementById('projects');
+        if (projSec) {
+          var subtitle = projSec.querySelector('.section-subtitle');
+          var savedText = subtitle ? subtitle.textContent : '';
+          var pcards = projSec.querySelectorAll('.project-card');
+          pcards.forEach(function (c) { c.classList.add('anim-up'); });
+
+          /* Typewriter setup */
+          var cursor = null;
+          if (subtitle) {
+            subtitle.textContent = '';
+            cursor = document.createElement('span');
+            cursor.className = 'tw-cursor';
+            subtitle.appendChild(cursor);
+          }
+
+          once(projSec, function () {
+            /* Typewriter */
+            if (subtitle && savedText && cursor) {
+              var chars = savedText.split(''), ci = 0;
+              var iv = setInterval(function () {
+                if (ci < chars.length) {
+                  subtitle.insertBefore(document.createTextNode(chars[ci++]), cursor);
+                } else {
+                  clearInterval(iv);
+                  var blinks = 0;
+                  var biv = setInterval(function () {
+                    cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+                    if (++blinks >= 6) { clearInterval(biv); cursor.remove(); }
+                  }, 400);
+                }
+              }, 40);
+            }
+            /* Grid-aware card stagger */
+            var desktop = window.innerWidth >= 768;
+            pcards.forEach(function (c, idx) {
+              var d = desktop
+                ? Math.floor(idx / 2) * 120 + (idx % 2) * 100
+                : idx * 70;
+              delay(function () { c.classList.add('anim-in'); }, 300 + d);
+            });
+          }, 0.04);
+        }
+
+        /* EDUCATION */
+        var eduSec = document.getElementById('education');
+        if (eduSec) {
+          var earts = eduSec.querySelectorAll('article');
+          var ctags = eduSec.querySelectorAll('.tag');
+          earts.forEach(function (a) { a.classList.add('anim-up'); });
+          once(eduSec, function () {
+            earts.forEach(function (a, i) {
+              delay(function () { a.classList.add('anim-in'); }, i * 150);
+            });
+            ctags.forEach(function (t, i) {
+              t.classList.add('anim-tag');
+              delay(function () { t.classList.add('anim-in'); }, 400 + i * 50);
+            });
+          });
+        }
+
+        /* FOOTER / CONTACT */
+        var footerEl = document.getElementById('contact');
+        if (footerEl) {
+          var fh2 = footerEl.querySelector('h2');
+          var flinks = footerEl.querySelectorAll('address a');
+          if (fh2) fh2.classList.add('anim-up');
+          flinks.forEach(function (a) { a.classList.add('anim-up'); });
+          once(footerEl, function () {
+            if (fh2) delay(function () { fh2.classList.add('anim-in'); }, 0);
+            flinks.forEach(function (a, i) {
+              delay(function () { a.classList.add('anim-in'); }, 200 + i * 100);
+            });
+          });
+        }
+      }());
+
+    }());
+  </script>
 
 </body>
+
 </html>
