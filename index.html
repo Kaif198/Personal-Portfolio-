@@ -797,6 +797,66 @@
       transform: scale(1.03);
     }
 
+    /* ── Badges ──────────────────────────────────────────────────── */
+    .badges-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+      margin-bottom: 32px;
+    }
+
+    .badge-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .badge-card:hover {
+      transform: translateY(-4px);
+      background-color: #1e1e1e;
+      box-shadow: -6px 0 20px rgba(245, 241, 232, 0.04);
+    }
+
+    .badge-img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 16px;
+      filter: grayscale(100%) opacity(0.8);
+      transition: filter 0.4s ease, transform 0.4s ease;
+    }
+
+    .badge-card:hover .badge-img {
+      filter: grayscale(0%) opacity(1);
+      transform: scale(1.05);
+    }
+
+    .badge-title {
+      font-family: var(--sans);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text);
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+
+    .badge-meta {
+      font-family: var(--sans);
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--secondary);
+    }
+
     /* ── Address Link Hover ──────────────────────────────────────── */
     address a {
       position: relative;
@@ -1007,6 +1067,11 @@
               <span class="tag">Cost-Benefit Analysis</span>
               <span class="tag">Data Storytelling</span>
               <span class="tag">Cross-Functional Stakeholder Management</span>
+              <span class="tag">Databricks Platform Architect (Azure)</span>
+              <span class="tag">Databricks Platform Architect (GCP)</span>
+              <span class="tag">Databricks Platform Architect (AWS)</span>
+              <span class="tag">SAP Integrated Business Planning (IBP)</span>
+              <span class="tag">Six Sigma White Belt</span>
             </div>
           </div><!-- end .about-content -->
         </div><!-- end .about-layout -->
@@ -1352,6 +1417,40 @@
           <span class="tag">SQL &amp; Relational Databases (IBM)</span>
           <span class="tag">PostgreSQL Bootcamp (Udemy)</span>
           <span class="tag">Project Management Foundations (Google)</span>
+          <span class="tag">Databricks Platform Architect (Azure)</span>
+          <span class="tag">Databricks Platform Architect (GCP)</span>
+          <span class="tag">Databricks Platform Architect (AWS)</span>
+          <span class="tag">SAP Integrated Business Planning (IBP)</span>
+          <span class="tag">Six Sigma White Belt</span>
+        </div>
+
+        <h3 class="cert-heading">Verified Badges</h3>
+        <div class="badges-grid">
+          <div class="badge-card">
+            <img src="databricks-azure.png" alt="Databricks Platform Architect Azure" class="badge-img">
+            <span class="badge-title">Platform Architect</span>
+            <span class="badge-meta">Azure Databricks</span>
+          </div>
+          <div class="badge-card">
+            <img src="databricks-gcp.png" alt="Databricks Platform Architect GCP" class="badge-img">
+            <span class="badge-title">Platform Architect</span>
+            <span class="badge-meta">Google Cloud</span>
+          </div>
+          <div class="badge-card">
+            <img src="databricks-aws.png" alt="Databricks Platform Architect AWS" class="badge-img">
+            <span class="badge-title">Platform Architect</span>
+            <span class="badge-meta">AWS Databricks</span>
+          </div>
+          <div class="badge-card">
+            <img src="sap-ibp.png" alt="SAP Integrated Business Planning Certified" class="badge-img">
+            <span class="badge-title">SAP IBP</span>
+            <span class="badge-meta">Certified</span>
+          </div>
+          <div class="badge-card">
+            <img src="six-sigma-white.png" alt="Council for Six Sigma Certification White Belt" class="badge-img">
+            <span class="badge-title">Six Sigma</span>
+            <span class="badge-meta">White Belt</span>
+          </div>
         </div>
       </div>
     </section>
@@ -1589,7 +1688,9 @@
         if (eduSec) {
           var earts = eduSec.querySelectorAll('article');
           var ctags = eduSec.querySelectorAll('.tag');
+          var bcards = eduSec.querySelectorAll('.badge-card');
           earts.forEach(function (a) { a.classList.add('anim-up'); });
+          bcards.forEach(function (c) { c.classList.add('anim-up'); });
           once(eduSec, function () {
             earts.forEach(function (a, i) {
               delay(function () { a.classList.add('anim-in'); }, i * 150);
@@ -1597,6 +1698,9 @@
             ctags.forEach(function (t, i) {
               t.classList.add('anim-tag');
               delay(function () { t.classList.add('anim-in'); }, 400 + i * 50);
+            });
+            bcards.forEach(function (c, i) {
+              delay(function () { c.classList.add('anim-in'); }, 600 + i * 100);
             });
           });
         }
